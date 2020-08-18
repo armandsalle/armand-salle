@@ -1,0 +1,14 @@
+@import './locomotive-scroll.css';
+
+[data-scroll-el-conxwtainer] {
+    // overflow: hidden;
+    transform-origin: center;
+    backface-visibility: visible;
+}
+
+[data-scroll-el-container]>div {
+    transform-origin: center;
+    backface-visibility: visible;
+    width: 100%;
+    height: 100%;
+}
