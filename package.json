@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "armand-salle",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Armand Salle portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Armand Sallé <armand.salle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
@@ -22,7 +22,8 @@
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio"
   ],
   "license": "0BSD",
   "scripts": {
@@ -36,9 +37,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/armandsalle/armand-salle"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/armandsalle/armand-salle/issues"
   }
 }
