@@ -1,0 +1,42 @@
+.nav {
+    width: 100vw;
+    padding-top: 2.5vw;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+        font-family: var(--font-secondary);
+        font-size: 1.25vw;
+        font-weight: 400;
+        margin-right: 2.29vw;
+        position: relative;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        & a:before {
+            content: "";
+            display: none;
+            position: absolute;
+            top: -0.83vw;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0.41vw;
+            height: 0.41vw;
+            border-radius: 50%;
+            background-color: var(--color-secondary);
+            z-index: 1;
+        }
+    }
+
+    &__item .active {
+        &:before {
+            display: block;
+        }
+    }
+}

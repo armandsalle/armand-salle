@@ -1,7 +1,28 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Nav = () => {
-  return <div>Nav</div>
+  return (
+    <nav className="nav">
+      <ul className="nav__list">
+        <li className="nav__item">
+          <Link to="/" activeClassName="active">
+            HOME
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/about" activeClassName="active">
+            ABOUT
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/cases" activeClassName="active">
+            CASES
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  )
 }
 
 export default Nav

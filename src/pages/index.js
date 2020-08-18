@@ -1,12 +1,18 @@
 import React from "react"
-// import { Link } from "gatsby"
 import SEO from "../components/seo"
+import HeroTitle from "../components/heroTitle"
+import Hero from "../components/hero"
 
 const IndexPage = () => (
-  <div>
+  <>
     <SEO title="Home" />
-    Hello
-  </div>
+    <HeroTitle
+      title="ARMAND SALLÉ"
+      infoFirstLine="NANTES, FRANCE"
+      infoSecondLine="2020"
+    />
+    <Hero />
+  </>
 )
 
 export default IndexPage
