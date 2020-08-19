@@ -12,6 +12,7 @@
         color: var(--color-primary);
         text-transform: uppercase;
         overflow: hidden;
+        opacity: 0;
 
         & .letter {
             display: inline-block;
@@ -28,6 +29,7 @@
 
         & span {
             display: inline-block;
+            transform: translateY(100%);
         }
 
         &--second {

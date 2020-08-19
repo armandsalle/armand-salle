@@ -28,6 +28,9 @@ const HeroTitle = ({ title, infoFirstLine, infoSecondLine }) => {
       // Title animation
       anime
         .timeline()
+        .set("h1", {
+          opacity: 1,
+        })
         .add({
           targets: "h1 .letter",
           translateY: ["100%", 0],

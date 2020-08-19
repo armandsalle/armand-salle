@@ -11,6 +11,7 @@
         height: 45vw;
         overflow: hidden;
         z-index: -1;
+        opacity: 0;
 
         & .gatsby-image-wrapper {
             width: 37.70vw;
@@ -20,7 +21,7 @@
     }
 
     h2 {
-        width: 33.85vw;
+        width: 34.8vw;
         display: flex;
         flex-wrap: wrap;
         overflow: hidden;
@@ -48,21 +49,20 @@
             color: var(--color-white);
             position: relative;
             margin-left: 4.3vw;
-            margin-right: 1vw;
             display: inline-block;
 
             .bar {
                 position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translate(-4.3vw, -50%);
+                top: calc(50% - 0.2vw);
+                left: -4.3vw;
                 width: 3.90vw;
                 height: 0.41vw;
                 background-color: var(--color-secondary);
             }
         }
 
-        .word {
+        .word,
+        .variant {
             display: inline-block;
             transform: translateY(100%);
         }
