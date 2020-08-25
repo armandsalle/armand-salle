@@ -1,25 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
-import HeroImage from "./heroImage"
 import Title from "./title"
+import Img from "gatsby-image"
 
-const title = [
-  [
-    { text: "CREATIVE", variant: false },
-    { text: "FRONTEND", variant: false },
-    { text: "DEVELOPER", variant: false },
-    { text: "FREELANCE", variant: true },
-  ],
-  [
-    { text: "WITH A GREAT", variant: false },
-    { text: "INTEREST IN", variant: false },
-    { text: "PRINT AND", variant: true },
-    { text: "WEB DESIGN", variant: true },
-  ],
-]
-
-const Hero = () => {
+const Hero = React.memo(({ title, imagePath }) => {
   const [hasDelay, setDelay] = useState(true)
 
   const [imgRef, inView] = useInView({
@@ -50,7 +35,10 @@ const Hero = () => {
     <div className="container mt-3">
       <div className="hero">
         <div className="img-wrapper" ref={imgRef}>
-          <HeroImage />
+          <Img
+            fluid={imagePath.src.childImageSharp.fluid}
+            alt={imagePath.alt}
+          />
         </div>
         {title.map((el, i) => (
           <h2 className={`${i === 1 ? "h2 align-right" : "h2"}`} key={i}>
@@ -67,6 +55,6 @@ const Hero = () => {
       </div>
     </div>
   )
-}
+})
 
 export default Hero

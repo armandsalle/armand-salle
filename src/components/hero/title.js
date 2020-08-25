@@ -25,7 +25,6 @@ const Title = React.memo(({ word, variant, hasDelay }) => {
 
   useEffect(() => {
     if (inView && animationCanRun) {
-      console.log("play")
       anime({
         targets: refText.current.querySelectorAll(".word, .variant"),
         translateY: ["100%", 0],
