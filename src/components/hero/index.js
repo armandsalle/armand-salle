@@ -53,7 +53,7 @@ const Hero = () => {
           <HeroImage />
         </div>
         {title.map((el, i) => (
-          <h2 className={`h2 ${i === 1 && "align-right"}`} key={i}>
+          <h2 className={`${i === 1 ? "h2 align-right" : "h2"}`} key={i}>
             {el.map((w, i) => (
               <Title
                 word={w.text}
