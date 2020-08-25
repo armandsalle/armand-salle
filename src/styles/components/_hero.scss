@@ -7,21 +7,21 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 37.70vw;
-        height: 45vw;
+        width: col(9);
+        height: cal(12);
         overflow: hidden;
         z-index: -1;
         opacity: 0;
 
         & .gatsby-image-wrapper {
-            width: 37.70vw;
-            height: 45vw;
+            width: col(9);
+            height: cal(12);
             object-fit: cover;
         }
     }
 
     h2 {
-        width: 34.8vw;
+        width: col(9);
         display: flex;
         flex-wrap: wrap;
         overflow: hidden;

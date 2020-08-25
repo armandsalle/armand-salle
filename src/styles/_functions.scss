@@ -1,0 +1,3 @@
+@function col($colsAmount) {
+    @return ($col * $colsAmount)+($gap * ($colsAmount - 1));
+}

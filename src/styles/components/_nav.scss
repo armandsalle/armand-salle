@@ -1,6 +1,7 @@
 .nav {
-    width: 100vw;
+    width: col(24);
     padding-top: 2.5vw;
+    margin: 0 auto;
 
     &__list {
         display: flex;
