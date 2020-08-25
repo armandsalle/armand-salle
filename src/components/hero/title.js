@@ -32,7 +32,7 @@ const Title = React.memo(({ word, variant, hasDelay }) => {
         opacity: [0, 1],
         easing: "easeOutSine",
         duration: 800,
-        delay: (_, i) => (hasDelay ? 1000 + 100 * i : 100 * i),
+        delay: () => (hasDelay ? 1200 : 0),
         begin: () => setAnimationRun(false),
       })
     }
