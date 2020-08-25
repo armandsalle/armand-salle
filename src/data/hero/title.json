@@ -1,0 +1,20 @@
+{
+  "title": [
+    [
+      { "text": "CREATIVE", "variant": false },
+      { "text": "FRONTEND", "variant": false },
+      { "text": "DEVELOPER", "variant": false },
+      { "text": "FREELANCE", "variant": true }
+    ],
+    [
+      { "text": "WITH A GREAT", "variant": false },
+      { "text": "INTEREST IN", "variant": false },
+      { "text": "PRINT AND", "variant": true },
+      { "text": "WEB DESIGN", "variant": true }
+    ]
+  ],
+  "imagePath": {
+    "src": "../../images/armand-plage.png",
+    "alt": "Armand Sallé at the beach"
+  }
+}
