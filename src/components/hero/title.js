@@ -10,7 +10,8 @@ const Title = React.memo(({ word, variant, hasDelay }) => {
 
   const [variantRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "10px",
+    rootMargin: "0px",
+    threshold: 0.1,
   })
 
   const refText = useRef(null)
