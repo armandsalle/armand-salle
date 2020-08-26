@@ -12,7 +12,7 @@ const HeroTitle = ({ title, infoFirstLine, infoSecondLine }) => {
     rootMargin: "0px",
   })
 
-  const spannify = useCallback(ref => {
+  const spanify = useCallback(ref => {
     ref.current.innerHTML = ref.current.textContent.replace(
       /\S/g,
       "<span class='letter'>$&</span>"
@@ -20,8 +20,8 @@ const HeroTitle = ({ title, infoFirstLine, infoSecondLine }) => {
   }, [])
 
   useEffect(() => {
-    spannify(titleRef)
-  }, [spannify])
+    spanify(titleRef)
+  }, [spanify])
 
   useEffect(() => {
     if (inView) {
