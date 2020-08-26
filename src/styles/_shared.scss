@@ -14,7 +14,13 @@
 }
 
 // SPACING
-
 .mt-3 {
     margin-top: 6.66vw;
+}
+
+// COLUMNS
+@for $i from 1 through 24 {
+    .col-#{$i} {
+        width: col($i);
+    }
 }

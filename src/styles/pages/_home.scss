@@ -1,0 +1,30 @@
+.home {
+    &-about {
+        margin: 0 auto;
+        width: col(20);
+        margin-top: $space-xxl;
+        text-transform: uppercase;
+
+        .first-p,
+        .second-p {
+
+            span.hide {
+                overflow: hidden;
+                display: block;
+
+                span.line {
+                    display: block;
+                    transform: translateY(100%);
+                }
+            }
+        }
+
+        .first-p {
+            margin-bottom: $space-m;
+        }
+
+        .second-p {
+            margin-left: auto;
+        }
+    }
+}

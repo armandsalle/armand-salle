@@ -6,3 +6,15 @@ $bp-medium: 48.125em; //770px
 // Columns
 $col: 3.02vw; // 58px
 $gap: 0.83vw; // 16px
+
+
+// Spaces
+$space: 0.41vw; // 8px
+$space-xxxs: $space * 2; // 16px
+$space-xxs:$space * 4; // 32px
+$space-xs: $space * 5; // 40px
+$space-s: $space * 7; // 56px
+$space-m: $space * 9; // 72px
+$space-l: $space * 10; // 80px
+$space-xl: $space * 16; // 128px
+$space-xxl: $space * 32; // 256px
