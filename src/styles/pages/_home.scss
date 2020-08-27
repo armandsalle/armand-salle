@@ -3,14 +3,15 @@
         margin: 0 auto;
         width: col(20);
         margin-top: $space-xxl;
+        margin-bottom: $space-xxl;
         text-transform: uppercase;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        position: relative;
 
         .first-p,
         .second-p {
-
             span.hide {
                 overflow: hidden;
                 display: block;
