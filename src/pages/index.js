@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import HeroTitle from "../components/heroTitle"
 import Hero from "../components/hero"
 import Text from "../components/text"
+import CustomLink from "../components/customLink"
 
 const IndexPage = ({
   data: {
@@ -21,6 +22,7 @@ const IndexPage = ({
         <Text className="first-p" col={firstParagraph.col} splitAndAnime>
           {firstParagraph.text}
         </Text>
+        <CustomLink to="/about" text="Learn more" textLink="about me" />
         <Text className="second-p" col={secondParagraph.col} splitAndAnime>
           {secondParagraph.text}
         </Text>

@@ -4,6 +4,9 @@
         width: col(20);
         margin-top: $space-xxl;
         text-transform: uppercase;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
 
         .first-p,
         .second-p {
@@ -21,6 +24,7 @@
 
         .first-p {
             margin-bottom: $space-m;
+            margin-right: col(9);
         }
 
         .second-p {
