@@ -5,6 +5,7 @@ import HeroTitle from "../components/heroTitle"
 import Hero from "../components/hero"
 import Text from "../components/text"
 import CustomLink from "../components/customLink"
+import FunnyCircle from "../components/funnyCircle"
 
 const IndexPage = ({
   data: {
@@ -26,6 +27,7 @@ const IndexPage = ({
         <Text className="second-p" col={secondParagraph.col} splitAndAnime>
           {secondParagraph.text}
         </Text>
+        <FunnyCircle />
       </div>
     </main>
   )

@@ -1,0 +1,11 @@
+.funny-circle {
+    --deg: 0deg;
+    width: col(3);
+    height: col(3);
+    background: linear-gradient(var(--deg), var(--color-primary), var(--color-secondary));
+    border-radius: 50%;
+    position: absolute;
+    top: 12.39vw;
+    right: col(3);
+    z-index: -1;
+}
