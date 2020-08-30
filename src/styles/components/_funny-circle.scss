@@ -1,11 +1,21 @@
 .funny-circle {
-    --deg: 0deg;
     width: col(3);
     height: col(3);
-    background: linear-gradient(var(--deg), var(--color-primary), var(--color-secondary));
+    background: linear-gradient(0turn, var(--color-primary), var(--color-secondary));
     border-radius: 50%;
     position: absolute;
     top: 12.39vw;
     right: col(3);
     z-index: -1;
+    animation: turn 5s linear infinite;
+}
+
+@keyframes turn {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

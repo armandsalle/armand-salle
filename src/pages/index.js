@@ -3,35 +3,30 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import HeroTitle from "../components/heroTitle"
 import Hero from "../components/hero"
-import Text from "../components/text"
-import CustomLink from "../components/customLink"
-import FunnyCircle from "../components/funnyCircle"
+import Love from "../components/love"
+import HomeShowCase from "../components/homeShowCase"
+import HomeAbout from "../components/homeAbout"
 
 const IndexPage = ({
   data: {
     title: { title, location, year },
     hero: { heroTitle, imagePath },
-    content: { firstParagraph, secondParagraph },
+    content: { about, love },
+    projects: { projects },
   },
 }) => {
   return (
-    <main className="home">
+    <>
       <SEO title="Home" />
       <HeroTitle title={title} infoFirstLine={location} infoSecondLine={year} />
       <Hero title={heroTitle} imagePath={imagePath} />
-      <div className="home-about">
-        <Text className="first-p" col={firstParagraph.col} splitAndAnime>
-          {firstParagraph.text}
-        </Text>
-        <CustomLink to="/about" text="Learn more" textLink="about me" />
-        <Text className="second-p" col={secondParagraph.col} splitAndAnime>
-          {secondParagraph.text}
-        </Text>
-        <FunnyCircle />
-      </div>
-    </main>
+      <HomeAbout about={about} />
+      <HomeShowCase projects={projects} />
+      <Love love={love} />
+    </>
   )
 }
+
 export const indexQuery = graphql`
   query Index {
     title: heroTitleJson {
@@ -56,13 +51,42 @@ export const indexQuery = graphql`
       }
     }
     content: indexJson {
-      firstParagraph {
-        text
-        col
+      about {
+        firstParagraph {
+          text
+          col
+        }
+        secondParagraph {
+          text
+          col
+        }
+        linkAbout {
+          src {
+            childImageSharp {
+              fixed(width: 200, height: 200, quality: 80) {
+                ...GatsbyImageSharpFixed_noBase64
+              }
+            }
+          }
+          alt
+        }
       }
-      secondParagraph {
-        text
-        col
+      love {
+        loveTitle
+        loveList
+        miniText
+        contactText
+      }
+    }
+    projects: projectsJson(
+      projects: { elemMatch: { isOnHome: { eq: true } } }
+    ) {
+      projects {
+        id
+        title
+        thumbnail {
+          publicURL
+        }
       }
     }
   }

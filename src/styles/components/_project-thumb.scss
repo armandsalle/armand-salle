@@ -1,0 +1,30 @@
+.project-thumb {
+    width: col(9);
+    display: block;
+
+    &__img {
+        width: 100%;
+        height: col(6);
+    }
+
+    &__info {
+        margin-top: $space;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+        h3 {
+            line-height: 1;
+        }
+
+        .arrow {
+            width: 4vw;
+            height: 2vw;
+            background-image: url("../../images/icon.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: translateY(-115%);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.showcase {
+    width: col(22);
+    margin: 0 auto $space-xxl auto;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+
+    .sticky-link {
+        position: sticky;
+        top: 0;
+        right: 0;
+        margin-left: auto;
+    }
+
+    &__projects_wrapper {
+        margin-top: $space-m;
+
+        .project-thumb {
+            margin-bottom: $space-m;
+        }
+
+        .project-thumb:nth-child(1) {
+            margin-left: col(2);
+        }
+
+        .project-thumb:nth-child(2) {
+            margin-left: col(9);
+        }
+
+        .project-thumb:nth-child(3) {
+            margin-left: col(4);
+            margin-bottom: 0;
+        }
+    }
+}

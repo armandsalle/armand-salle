@@ -1,0 +1,27 @@
+{
+  "about": {
+    "firstParagraph": {
+      "text": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
+      "col": 11
+    },
+    "secondParagraph": {
+      "text": "At vero eos et accusam et justo<br /> duo dolores et ea rebum. Stet<br /> clita kasd gubergren, no sea<br /> takimata sanctus est Lorem<br /> ipsum dolor sit amet. Lorem<br /> ipsum dolor sit amet,<br /> consetetur sadipscing elitr.",
+      "col": 12
+    },
+    "linkAbout": {
+      "src": "../../images/armand.png",
+      "alt": "About page"
+    }
+  },
+  "love": {
+    "loveTitle": "Now that we’ve seen<br /> what I’ve done,<br /> let’s see together<br /> what I’d like to do / learn",
+    "loveList": [
+      "Font design",
+      "Awards sites",
+      "WebGl",
+      "The best homemade <span>pizza"
+    ],
+    "miniText": "And muuuuuuuuch more!",
+    "contactText": "so if you can help me make<br /> these things happen, Please<br /> feel free to drop me a line"
+  }
+}

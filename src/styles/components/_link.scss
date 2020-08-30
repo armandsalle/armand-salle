@@ -3,6 +3,7 @@
     font-size: 1.56vw;
     display: inline-flex;
     align-items: center;
+    
 
     &:hover {
         .link__text-link__normal {
@@ -12,7 +13,6 @@
         .link__text-link__italic {
             transform: translateY(0);
         }
-
     }
 
     &::before {
@@ -54,7 +54,14 @@
             left: 0;
             transform: translateY(100%);
             font-family: var(--font-italic);
-            font-style: italic;
+
+            @-moz-document url-prefix() {
+                & {
+                    height: 1.9vw;
+                    line-height: 1;
+                }
+            }
+
         }
     }
 }

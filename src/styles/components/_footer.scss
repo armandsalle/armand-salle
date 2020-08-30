@@ -1,0 +1,136 @@
+.footer {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    width: col(24);
+    margin: 0 auto;
+    padding: $space-m 0;
+
+    &__wrapper {
+        width: col(22);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__content {
+        margin-top: $space-xl;
+        display: flex;
+        justify-content: flex-end;
+        justify-content: space-between;
+        width: 100%;
+
+        p {
+            font-size: 1.25vw;
+            font-family: var(--font-secondary);
+
+            width: col(7);
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &-link {
+        overflow: hidden;
+        position: relative;
+
+        &:first-child {
+            margin-bottom: $space-xxxs;
+        }
+
+        &:hover {
+            .footer-link__first {
+                transform: translateY(-100%);
+            }
+
+            .footer-link__second {
+                transform: translateY(0);
+            }
+        }
+
+        &__first,
+        &__second {
+            transition: transform 200ms ease-out;
+        }
+
+        &__first {
+            display: inline-block;
+            transform: translateY(0);
+        }
+
+        &__second {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(100%);
+        }
+
+        svg {
+            width: 3.4vw;
+            height: 2vw;
+            margin-left: $space-xxxs;
+            color: var(--color-primary);
+            transform: translateY(8%);
+        }
+    }
+
+    &__social-links {
+        display: flex;
+        margin-top: $space-m;
+
+        .social-link {
+            font-size: 1.04vw;
+            font-family: var(--font-secondary);
+
+            margin-right: $space-xxs;
+            position: relative;
+            overflow-y: hidden;
+
+            &:hover {
+                .social-link__first {
+                    transform: translateY(-100%);
+                }
+
+                .social-link__second {
+                    transform: translateY(0);
+                }
+            }
+
+            &__first,
+            &__second {
+                transition: transform 200ms ease-out;
+            }
+
+            &__first {
+                display: inline-block;
+                transform: translateY(0);
+            }
+
+            &__second {
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateY(100%);
+            }
+        }
+    }
+}
+
+.back-to-top {
+    text-transform: uppercase;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-secondary);
+    font-size: 1.25vw;
+    margin-left: auto;
+    cursor: pointer;
+}

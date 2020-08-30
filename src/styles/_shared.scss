@@ -10,7 +10,25 @@
     line-height: 1.18;
     font-weight: 400;
     color: var(--color-primary);
-    text-transform: uppercase;
+    
+}
+
+.h3 {
+    font-size: 2.39vw;
+    line-height: 1;
+}
+
+.p-info {
+    font-size: 1.25vw;
+    line-height: 1.2;
+    font-family: var(--font-secondary);
+    
+}
+
+.p-number {
+    font-size: 0.88vw;
+    font-family: var(--font-secondary);
+    font-weight: 500;
 }
 
 // SPACING

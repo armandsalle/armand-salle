@@ -11,7 +11,16 @@ module.exports = {
         component: require.resolve(`./src/components/layout/index.js`),
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        useResolveUrlLoader: {
+          options: {
+            debug: false,
+          },
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     {

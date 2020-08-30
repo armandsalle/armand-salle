@@ -1,0 +1,48 @@
+.home-about {
+    margin: 0 auto;
+    width: col(20);
+    margin-top: $space-xxl;
+    margin-bottom: $space-xxl;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: relative;
+
+    .first-p,
+    .second-p {
+        span.hide {
+            overflow: hidden;
+            display: block;
+
+            span.line {
+                display: block;
+                transform: translateY(100%);
+            }
+        }
+    }
+
+    .first-p {
+        margin-bottom: $space-m;
+        margin-right: col(9);
+    }
+
+    .second-p {
+        margin-left: auto;
+    }
+
+    .custom-about-link {
+        position: relative;
+
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 10.41vw;
+            height: 10.41vw;
+            transform: translateY(50%);
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+}
