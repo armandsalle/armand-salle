@@ -16,5 +16,9 @@
   "imagePath": {
     "src": "../../images/armand-plage.png",
     "alt": "Armand Sallé at the beach"
+  },
+  "aboutImagePath": {
+    "src": "../../images/armand.png",
+    "alt": "Armand Sallé in front of a wall"
   }
 }

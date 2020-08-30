@@ -13,11 +13,38 @@
         z-index: -1;
         opacity: 0;
 
+        &.--about {
+            width: 100vw;
+            height: 57.5vw;
+
+            & .about-hero-img {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: col(9);
+                height: cal(12);
+                transform: translateX(-50%);
+
+                &:last-child {
+                    right: 0;
+                    left: auto;
+                    top: 11.45vw;
+                    transform: translateX(50%);
+                }
+            }
+        }
+
         & .gatsby-image-wrapper {
             width: col(9);
             height: cal(12);
             object-fit: cover;
         }
+    }
+
+    .hero-about {
+        width: col(16);
+        margin: 0 auto;
     }
 
     h2 {
