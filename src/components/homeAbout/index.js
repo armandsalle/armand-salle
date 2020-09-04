@@ -6,6 +6,7 @@ import anime from "animejs"
 
 const HomeAbout = ({
   about: { firstParagraph, secondParagraph, linkAbout },
+  page,
 }) => {
   const customLinkToAbout = useRef(null)
 
@@ -34,29 +35,33 @@ const HomeAbout = ({
   }, [])
 
   useEffect(() => {
-    customLinkToAbout.current.addEventListener("mouseenter", enterLink, false)
-    customLinkToAbout.current.addEventListener("mouseleave", leaveLink, false)
-  }, [enterLink, leaveLink])
+    if (page !== "about") {
+      customLinkToAbout.current.addEventListener("mouseenter", enterLink, false)
+      customLinkToAbout.current.addEventListener("mouseleave", leaveLink, false)
+    }
+  }, [enterLink, leaveLink, page])
   return (
     <section className="home-about">
       <Text className="first-p" col={firstParagraph.col} splitAndAnime as="p">
         {firstParagraph.text}
       </Text>
 
-      <div className="custom-about-link" ref={customLinkToAbout}>
-        <CustomLink to="/about" text="Learn more" textLink="about me" />
+      {!page === "about" && (
+        <div className="custom-about-link" ref={customLinkToAbout}>
+          <CustomLink to="/about" text="Learn more" textLink="about me" />
 
-        <img
-          src={linkAbout.src.childImageSharp.fixed.src}
-          alt={linkAbout.alt}
-        />
-      </div>
+          <img
+            src={linkAbout.src.childImageSharp.fixed.src}
+            alt={linkAbout.alt}
+          />
+        </div>
+      )}
 
       <Text className="second-p" col={secondParagraph.col} splitAndAnime as="p">
         {secondParagraph.text}
       </Text>
 
-      <FunnyCircle />
+      {!page === "about" && <FunnyCircle />}
     </section>
   )
 }

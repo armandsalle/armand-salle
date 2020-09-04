@@ -33,7 +33,7 @@ const Hero = React.memo(({ title, imagePath, about }) => {
   }, [inView, setDelay])
 
   return (
-    <div className="container mt-3">
+    <header className="container mt-3">
       <div className="hero">
         <div className={cn("img-wrapper", about && "--about")} ref={imgRef}>
           {!about && (
@@ -74,7 +74,7 @@ const Hero = React.memo(({ title, imagePath, about }) => {
           ))}
         </div>
       </div>
-    </div>
+    </header>
   )
 })
 
