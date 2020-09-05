@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import HeroTitle from "../components/heroTitle"
 import Hero from "../components/hero"
-import Love from "../components/love"
+import Like from "../components/like"
 import HomeShowCase from "../components/homeShowCase"
 import HomeAbout from "../components/homeAbout"
 
@@ -11,7 +11,7 @@ const IndexPage = ({
   data: {
     title: { title, location, year },
     hero: { heroTitle, imagePath },
-    content: { about, love },
+    content: { about, like },
     projects: { projects },
   },
 }) => {
@@ -22,7 +22,7 @@ const IndexPage = ({
       <Hero title={heroTitle} imagePath={imagePath} />
       <HomeAbout about={about} />
       <HomeShowCase projects={projects} />
-      <Love love={love} />
+      <Like like={like} />
     </>
   )
 }
@@ -71,9 +71,9 @@ export const indexQuery = graphql`
           alt
         }
       }
-      love {
-        loveTitle
-        loveList
+      like {
+        likeTitle
+        likeList
         miniText
         contactText
       }

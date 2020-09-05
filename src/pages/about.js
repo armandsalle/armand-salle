@@ -5,12 +5,13 @@ import Hero from "../components/hero"
 import { graphql } from "gatsby"
 import HomeAbout from "../components/homeAbout"
 import Resume from "../components/resume"
+import Love from "../components/love"
 
 const AboutPage = ({
   data: {
     title: { title, location, year },
     hero: { heroTitle, aboutImagePath },
-    content: { about, resume },
+    content: { about, resume, love },
   },
 }) => (
   <>
@@ -19,6 +20,7 @@ const AboutPage = ({
     <Hero title={heroTitle} imagePath={aboutImagePath} about />
     <HomeAbout about={about} page="about" />
     <Resume resume={resume} />
+    <Love love={love} />
   </>
 )
 
@@ -60,6 +62,18 @@ export const aboutQuery = graphql`
         experiences
         development
         design
+      }
+      love {
+        title
+        images {
+          src {
+            childImageSharp {
+              fluid(maxWidth: 710, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }
