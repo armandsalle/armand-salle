@@ -14,7 +14,7 @@
     },
     {
       "isOnHome": true,
-      "title": "MADLINE VSLR",
+      "title": "CAMILLE SNR",
       "type": "DESIGN & DEV",
       "year": 2020,
       "link": "https://madlinevslr.com/",
@@ -26,6 +26,18 @@
     },
     {
       "isOnHome": true,
+      "title": "MADLINE VSLR",
+      "type": "DESIGN & DEV",
+      "year": 2020,
+      "link": "https://madlinevslr.com/",
+      "topDesc": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed voluptua.",
+      "bottomDesc": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+      "thumbnail": "../../images/template.png",
+      "images": [],
+      "id": 3
+    },
+    {
+      "isOnHome": false,
       "title": "HEMPHILL MAG",
       "type": "DESIGN",
       "year": 2017,
@@ -34,7 +46,7 @@
       "bottomDesc": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
       "thumbnail": "../../images/template.png",
       "images": [],
-      "id": 3
+      "id": 4
     }
   ]
 }
