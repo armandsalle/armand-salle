@@ -1,0 +1,140 @@
+.like {
+    width: col(22);
+    margin: 0 auto $space-xl auto;
+
+    .h2 {
+     color: var(--color-white);
+     width: col(18);
+
+     span.hide {
+         overflow: hidden;
+         display: block;
+
+         span.line {
+             display: block;
+             transform: translateY(100%);
+         }
+     }
+ }
+
+    &__things {
+        margin-top: $space-xl;
+        margin-left: auto;
+        width: col(13);
+    }
+
+    &__thing {
+        width: 100%;
+        text-align: right;
+        position: relative;
+        padding: $space-s 0;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0%;
+            height: 0.05vw;
+            background-color: var(--color-white);
+            transition: width .7s .3s ease-out;
+        }
+
+        &:last-of-type {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 0%;
+                height: 0.05vw;
+                background-color: var(--color-white);
+                transition: width .7s .6s ease-out;
+            }
+
+            &.thing-visible {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.thing-visible {
+            &:before {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            font-size: 2.5vw;
+            color: var(--color-primary);
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+
+            & .pizza {
+                margin-left: 0.57vw;
+                font-family: var(--font-italic);
+            }
+        }
+
+        &__number {
+            font-size: 0.83vw;
+            color: var(--color-white);
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            display: block;
+            margin-right: $space-xxxs;
+            opacity: 0;
+        }
+    }
+
+    &__miniText {
+        font-size: 1.25vw;
+        font-family: var(--font-secondary);
+
+        text-align: right;
+        margin-top: $space-xxs;
+        overflow: hidden;
+
+        span {
+            display: inline-block;
+        }
+
+        span.word {
+            margin-right: 0.3vw;
+
+            span {
+                transform: translateY(100%);
+            }
+        }
+    }
+
+    &__contact {
+        width: col(16);
+        margin-top: $space-xl;
+        margin-left: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &__text {
+            width: col(11);
+
+
+            span.hide {
+                overflow: hidden;
+                display: block;
+
+                span.line {
+                    display: block;
+                    transform: translateY(100%);
+                }
+            }
+        }
+    }
+}
