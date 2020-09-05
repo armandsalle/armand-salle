@@ -78,12 +78,11 @@ export const indexQuery = graphql`
         contactText
       }
     }
-    projects: projectsJson(
-      projects: { elemMatch: { isOnHome: { eq: true } } }
-    ) {
+    projects: projectsJson {
       projects {
         id
         title
+        isOnHome
         thumbnail {
           publicURL
         }
