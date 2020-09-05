@@ -24,6 +24,7 @@ const CasesPage = ({
       slider: ".cases__container",
       smoothAmount: 0.1,
       dragSpeed: 2,
+      hasTouchEvents: true,
     })
 
     slider.init()
