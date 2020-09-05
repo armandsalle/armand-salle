@@ -11,13 +11,16 @@ const HomeShowCase = ({ projects }) => {
         </div>
 
         <div className="showcase__projects_wrapper">
-          {projects.map(project => (
-            <ProjectThumb
-              key={project.id}
-              title={project.title}
-              thumbnail={project.thumbnail.publicURL}
-            />
-          ))}
+          {projects.map(
+            project =>
+              project.isOnHome && (
+                <ProjectThumb
+                  key={project.id}
+                  title={project.title}
+                  thumbnail={project.thumbnail.publicURL}
+                />
+              )
+          )}
         </div>
       </div>
 
