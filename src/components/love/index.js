@@ -21,13 +21,19 @@ const Love = ({ love: { title, images } }) => {
       images[currentImg].style.zIndex = currentZindex
     }
 
-    imagesRef.current.addEventListener("mouseenter", () => {
-      changeZindex()
-      interval = setInterval(changeZindex, 150)
-    })
+    imagesRef.current.addEventListener(
+      "mouseenter",
+      () => {
+        changeZindex()
+        interval = setInterval(changeZindex, 150)
+      },
+      false
+    )
 
-    imagesRef.current.addEventListener("mouseleave", () =>
-      clearInterval(interval)
+    imagesRef.current.addEventListener(
+      "mouseleave",
+      () => clearInterval(interval),
+      false
     )
   }, [])
 
