@@ -17,5 +17,26 @@
     "experiences": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
     "development": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
     "design": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+  },
+  "love": {
+    "title": "Hover this<br /> to see things<br /> I love",
+    "images": [
+      { "src": "../../images/love/1.png", "alt": "love" },
+      { "src": "../../images/love/2.png", "alt": "love" },
+      { "src": "../../images/love/3.png", "alt": "love" },
+      { "src": "../../images/love/4.png", "alt": "love" },
+      { "src": "../../images/love/5.png", "alt": "love" },
+      { "src": "../../images/love/6.png", "alt": "love" },
+      { "src": "../../images/love/7.png", "alt": "love" },
+      { "src": "../../images/love/8.png", "alt": "love" },
+      { "src": "../../images/love/9.png", "alt": "love" },
+      { "src": "../../images/love/10.png", "alt": "love" },
+      { "src": "../../images/love/11.png", "alt": "love" },
+      { "src": "../../images/love/12.png", "alt": "love" },
+      { "src": "../../images/love/13.png", "alt": "love" },
+      { "src": "../../images/love/14.png", "alt": "love" },
+      { "src": "../../images/love/15.png", "alt": "love" },
+      { "src": "../../images/love/16.png", "alt": "love" }
+    ]
   }
 }

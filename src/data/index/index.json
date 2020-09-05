@@ -13,9 +13,9 @@
       "alt": "About page"
     }
   },
-  "love": {
-    "loveTitle": "Now that we’ve seen<br /> what I’ve done,<br /> let’s see together<br /> what I’d like to do / learn",
-    "loveList": [
+  "like": {
+    "likeTitle": "Now that we’ve seen<br /> what I’ve done,<br /> let’s see together<br /> what I’d like to do / learn",
+    "likeList": [
       "Font design",
       "Awards sites",
       "WebGl",
