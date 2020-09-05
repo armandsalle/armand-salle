@@ -1,0 +1,31 @@
+.cases {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+
+    &__container {
+        display: flex;
+    }
+
+    & .project-thumb {
+        flex: 0 0 auto;
+        margin-right: col(2);
+        user-select: none;
+        -webkit-user-drag: none;
+
+        & * {
+            pointer-events: none;
+            user-select: none;
+        }
+
+        &:nth-child(1) {
+            margin-left: col(2);
+        }
+    }
+}
