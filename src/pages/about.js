@@ -4,12 +4,13 @@ import HeroTitle from "../components/heroTitle"
 import Hero from "../components/hero"
 import { graphql } from "gatsby"
 import HomeAbout from "../components/homeAbout"
+import Resume from "../components/resume"
 
 const AboutPage = ({
   data: {
     title: { title, location, year },
     hero: { heroTitle, aboutImagePath },
-    content: { about },
+    content: { about, resume },
   },
 }) => (
   <>
@@ -17,6 +18,7 @@ const AboutPage = ({
     <HeroTitle title={title} infoFirstLine={location} infoSecondLine={year} />
     <Hero title={heroTitle} imagePath={aboutImagePath} about />
     <HomeAbout about={about} page="about" />
+    <Resume resume={resume} />
   </>
 )
 
@@ -53,6 +55,11 @@ export const aboutQuery = graphql`
           text
           col
         }
+      }
+      resume {
+        experiences
+        development
+        design
       }
     }
   }

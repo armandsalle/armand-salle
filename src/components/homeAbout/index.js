@@ -46,7 +46,7 @@ const HomeAbout = ({
         {firstParagraph.text}
       </Text>
 
-      {!page === "about" && (
+      {page !== "about" && (
         <div className="custom-about-link" ref={customLinkToAbout}>
           <CustomLink to="/about" text="Learn more" textLink="about me" />
 
@@ -61,7 +61,7 @@ const HomeAbout = ({
         {secondParagraph.text}
       </Text>
 
-      {!page === "about" && <FunnyCircle />}
+      {page !== "about" && <FunnyCircle />}
     </section>
   )
 }

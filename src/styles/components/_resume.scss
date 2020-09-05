@@ -1,0 +1,37 @@
+.resume {
+    width: col(22);
+    margin: $space-xxl auto;
+
+    &__item {
+        margin-bottom: $space-m;
+        display: flex;
+        align-items: flex-start;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        width: col(5);
+        flex: 0 0 auto;
+        font-size: 1.25vw;
+        font-family: var(--font-secondary);
+        overflow: hidden;
+        transform: translateY(0.2vw);
+
+        & span {
+            display: block;
+            transition: transform .4s ease-out;
+            will-change: transform;
+
+            &.translate {
+                transform: translateY(100%);
+            }
+        }
+    }
+
+    &__content {
+        width: col(17);
+    }
+}
