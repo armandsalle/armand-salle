@@ -1,8 +1,9 @@
 import React, { useCallback, useRef, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
+import cn from "classname"
 
-const Line = ({ children }) => {
+const Line = ({ children, className }) => {
   const textRef = useRef(null)
   const [textViewRef, inView] = useInView({
     triggerOnce: true,
@@ -31,7 +32,7 @@ const Line = ({ children }) => {
   }, [inView, textRef])
 
   return (
-    <span className="hide" ref={setRefs}>
+    <span className={cn("hide", className)} ref={setRefs}>
       <span className="line">{children}</span>
     </span>
   )

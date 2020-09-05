@@ -1,10 +1,16 @@
 import React from "react"
 import Line from "./line"
 
-const Text = ({ children, col, className, splitAndAnime, as }) => {
-  const inner = children
-    .split("<br />")
-    .map((text, i) => <Line key={i}>{text}</Line>)
+const Text = ({ children, col, className, splitAndAnime, as, love }) => {
+  const inner = children.split("<br />").map((text, i) =>
+    love && i === 0 ? (
+      <Line key={i} className="color-primary">
+        {text}
+      </Line>
+    ) : (
+      <Line key={i}>{text}</Line>
+    )
+  )
 
   switch (as) {
     case "p":
