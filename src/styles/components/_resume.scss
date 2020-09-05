@@ -22,7 +22,7 @@
 
         & span {
             display: block;
-            transition: transform .4s ease-out;
+            transition: transform .3s .2s ease-out;
             will-change: transform;
 
             &.translate {
