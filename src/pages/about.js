@@ -15,7 +15,7 @@ const AboutPage = ({
   },
 }) => (
   <>
-    <SEO title="Home" />
+    <SEO title="About" />
     <HeroTitle title={title} infoFirstLine={location} infoSecondLine={year} />
     <Hero title={heroTitle} imagePath={aboutImagePath} about />
     <HomeAbout about={about} page="about" />
