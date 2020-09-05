@@ -1,21 +1,48 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
+import Img from "gatsby-image"
 import Text from "../text"
-import Things from "./things"
-import Contact from "./contact"
-import MiniText from "./miniText"
 
-const Love = ({ love }) => {
+const Love = ({ love: { title, images } }) => {
+  const imagesRef = useRef(null)
+
+  useEffect(() => {
+    let currentImg = 0
+    let currentZindex = 1
+    let interval
+
+    const images = imagesRef.current.querySelectorAll(".love__image_wrapper")
+
+    const changeZindex = () => {
+      currentZindex++
+      currentImg++
+      if (currentImg > images.length - 1) {
+        currentImg = 0
+      }
+      images[currentImg].style.zIndex = currentZindex
+    }
+
+    imagesRef.current.addEventListener("mouseenter", () => {
+      changeZindex()
+      interval = setInterval(changeZindex, 150)
+    })
+
+    imagesRef.current.addEventListener("mouseleave", () =>
+      clearInterval(interval)
+    )
+  }, [])
+
   return (
     <section className="love">
-      <Text className="h2" as="h2" splitAndAnime>
-        {love.loveTitle}
+      <Text as="h2" splitAndAnime className="love__title" love>
+        {title}
       </Text>
-
-      <Things loveList={love.loveList} />
-
-      <MiniText miniText={love.miniText} />
-
-      <Contact contactText={love.contactText} />
+      <div className="love__images" ref={imagesRef}>
+        {images.map((el, i) => (
+          <div className="love__image_wrapper" key={i}>
+            <Img fluid={el.src.childImageSharp.fluid} alt={el.alt} />
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
