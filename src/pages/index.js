@@ -83,6 +83,7 @@ export const indexQuery = graphql`
         id
         title
         isOnHome
+        slug
         thumbnail {
           publicURL
         }

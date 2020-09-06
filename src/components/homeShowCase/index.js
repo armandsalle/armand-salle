@@ -18,6 +18,7 @@ const HomeShowCase = ({ projects }) => {
                   key={project.id}
                   title={project.title}
                   thumbnail={project.thumbnail.publicURL}
+                  url={project.slug}
                 />
               )
           )}

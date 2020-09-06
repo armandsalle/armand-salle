@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useCallback } from "react"
 import { Link } from "gatsby"
 import anime from "animejs"
 
-const ProjectThumb = ({ title, thumbnail }) => {
+const ProjectThumb = ({ title, thumbnail, url }) => {
   const projectThumbRef = useRef(null)
 
   const enterProjectLink = useCallback(() => {
@@ -45,7 +45,7 @@ const ProjectThumb = ({ title, thumbnail }) => {
   }, [enterProjectLink, leaveProjectLink])
 
   return (
-    <Link to="/about" className="project-thumb" ref={projectThumbRef}>
+    <Link to={`/case/${url}`} className="project-thumb" ref={projectThumbRef}>
       <div
         className="project-thumb__img"
         style={{ backgroundImage: `url(${thumbnail})` }}
