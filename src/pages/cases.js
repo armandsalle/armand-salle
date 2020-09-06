@@ -22,7 +22,7 @@ const CasesPage = ({
     const slider = new CreateSlider({
       container: ".cases",
       slider: ".cases__container",
-      smoothAmount: 0.1,
+      smoothAmount: 0.08,
       dragSpeed: 2,
       hasTouchEvents: true,
     })
@@ -53,7 +53,6 @@ const CasesPage = ({
         "mouseup",
         e => {
           const endTimer = new Date()
-          console.log(endTimer - startTimer)
           if (endTimer - startTimer < 100) {
             navigate(link)
           }
@@ -75,6 +74,7 @@ const CasesPage = ({
               key={i}
               title={project.title}
               thumbnail={project.thumbnail.publicURL}
+              url={project.slug}
             />
           ))}
         </div>
@@ -89,6 +89,7 @@ export const casesQuery = graphql`
       projects {
         id
         title
+        slug
         thumbnail {
           publicURL
         }
