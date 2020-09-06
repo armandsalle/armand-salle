@@ -11,12 +11,12 @@ const Nav = () => {
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/about" activeClassName="active">
+          <Link to="/about/" activeClassName="active">
             ABOUT
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/cases" activeClassName="active">
+          <Link to="/cases/" activeClassName="active">
             CASES
           </Link>
         </li>
