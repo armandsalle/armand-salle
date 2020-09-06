@@ -11,11 +11,14 @@
 
     &__container {
         display: flex;
+        will-change: transform;
+        backface-visibility: hidden;
     }
 
     & .project-thumb {
         flex: 0 0 auto;
-        margin-right: col(2);
+        flex-wrap: nowrap;
+        margin-right: col(3);
         user-select: none;
         -webkit-user-drag: none;
 
