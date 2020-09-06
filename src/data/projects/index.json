@@ -3,6 +3,7 @@
     {
       "isOnHome": true,
       "title": "BUTTER SLIDER",
+      "slug": "butter-slider",
       "type": "DEV",
       "year": 2020,
       "link": "https://github.com/armandsalle/butter-slider",
@@ -15,6 +16,7 @@
     {
       "isOnHome": true,
       "title": "CAMILLE SNR",
+      "slug": "camille-snr",
       "type": "DESIGN & DEV",
       "year": 2020,
       "link": "https://madlinevslr.com/",
@@ -27,6 +29,7 @@
     {
       "isOnHome": true,
       "title": "MADLINE VSLR",
+      "slug": "madline-vslr",
       "type": "DESIGN & DEV",
       "year": 2020,
       "link": "https://madlinevslr.com/",
@@ -39,6 +42,7 @@
     {
       "isOnHome": false,
       "title": "HEMPHILL MAG",
+      "slug": "hemphill-mag",
       "type": "DESIGN",
       "year": 2017,
       "link": "https://issuu.com/hemphill_mag/docs/numero1",
