@@ -1,11 +1,14 @@
-import React, { useRef, useEffect, useCallback } from "react"
+import React, { useRef, useEffect, useCallback, useContext } from "react"
 import { Link } from "gatsby"
 import anime from "animejs"
+import { ProjectHoverContext } from "../../contexts/projectHoverContext"
 
 const ProjectThumb = ({ title, thumbnail, url }) => {
   const projectThumbRef = useRef(null)
+  const { setHover } = useContext(ProjectHoverContext)
 
   const enterProjectLink = useCallback(() => {
+    setHover(true)
     anime.remove(projectThumbRef.current.querySelector(".arrow"))
 
     anime({
@@ -14,9 +17,10 @@ const ProjectThumb = ({ title, thumbnail, url }) => {
       easing: "easeOutSine",
       duration: 300,
     })
-  }, [])
+  }, [setHover])
 
   const leaveProjectLink = useCallback(() => {
+    setHover(false)
     anime.remove(projectThumbRef.current.querySelector(".arrow"))
 
     anime({
@@ -25,7 +29,7 @@ const ProjectThumb = ({ title, thumbnail, url }) => {
       easing: "easeOutSine",
       duration: 300,
     })
-  }, [])
+  }, [setHover])
 
   useEffect(() => {
     anime.set(projectThumbRef.current.querySelector(".arrow"), {
