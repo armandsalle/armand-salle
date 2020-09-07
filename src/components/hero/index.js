@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
 import Title from "./title"
@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import cn from "classname"
 
 const Hero = React.memo(({ title, imagePath, about }) => {
-  const [hasDelay, setDelay] = useState(true)
+  const titleHeroRef = useRef(null)
 
   const [imgRef, inView] = useInView({
     triggerOnce: true,
@@ -15,22 +15,28 @@ const Hero = React.memo(({ title, imagePath, about }) => {
 
   useEffect(() => {
     if (inView) {
-      // Image animation
-      anime({
-        targets: ".img-wrapper",
-        opacity: [0, 1],
-        easing: "easeOutSine",
-        duration: 600,
-        delay: 1000,
-        begin: () => {
-          // Start after delay
-          setTimeout(() => {
-            setDelay(false)
-          }, 1000)
-        },
-      })
+      anime
+        .timeline()
+        .add({
+          targets: ".img-wrapper",
+          opacity: [0, 1],
+          easing: "easeOutSine",
+          duration: 600,
+          delay: 1000,
+        })
+        .add(
+          {
+            targets: titleHeroRef.current.querySelectorAll(".word, .variant"),
+            translateY: ["100%", 0],
+            opacity: [0, 1],
+            easing: "easeOutSine",
+            duration: 800,
+            delay: (_, i) => i * 80,
+          },
+          "-=500"
+        )
     }
-  }, [inView, setDelay])
+  }, [inView])
 
   return (
     <header className="container mt-3">
@@ -59,16 +65,11 @@ const Hero = React.memo(({ title, imagePath, about }) => {
             </>
           )}
         </div>
-        <div className={cn(about && "hero-about")}>
+        <div className={cn(about && "hero-about")} ref={titleHeroRef}>
           {title.map((el, i) => (
             <h2 className={`${i === 1 ? "h2 align-right" : "h2"}`} key={i}>
               {el.map((w, i) => (
-                <Title
-                  word={w.text}
-                  key={i}
-                  variant={w?.variant}
-                  hasDelay={hasDelay}
-                />
+                <Title word={w.text} key={i} variant={w?.variant} />
               ))}
             </h2>
           ))}

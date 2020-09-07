@@ -1,46 +1,12 @@
-import React, { useEffect, useRef, useCallback, useState } from "react"
+import React from "react"
 import Word from "./word"
-import { useInView } from "react-intersection-observer"
-import anime from "animejs"
 
-const Title = React.memo(({ word, variant, hasDelay }) => {
-  const [animationCanRun, setAnimationRun] = useState(true)
-
+const Title = React.memo(({ word, variant }) => {
   const wordToArr = word.split(" ")
-
-  const [variantRef, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: "0px",
-    threshold: 0.1,
-  })
-
-  const refText = useRef(null)
-
-  const setRefs = useCallback(
-    node => {
-      refText.current = node
-      variantRef(node)
-    },
-    [variantRef]
-  )
-
-  useEffect(() => {
-    if (inView && animationCanRun) {
-      anime({
-        targets: refText.current.querySelectorAll(".word, .variant"),
-        translateY: ["100%", 0],
-        opacity: [0, 1],
-        easing: "easeOutSine",
-        duration: 800,
-        delay: () => (hasDelay ? 1200 : 0),
-        begin: () => setAnimationRun(false),
-      })
-    }
-  }, [inView, refText, hasDelay, animationCanRun, setAnimationRun])
 
   return (
     <>
-      <div ref={setRefs}>
+      <div>
         {variant ? (
           <>
             <div>
