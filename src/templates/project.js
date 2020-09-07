@@ -7,7 +7,7 @@ const ProjectTemplate = ({
   data: {
     projectsJson: { projects },
   },
-  pathContext: { slug },
+  pageContext: { slug },
 }) => {
   const { title, year, type } = projects.find(p => p.slug === slug)
   return (
