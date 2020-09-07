@@ -8,16 +8,25 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 1;
+    overflow-x: hidden;
+
+    &__wrapper {
+        position: relative;
+        width: 100vw;
+        overflow-x: hidden;
+
+    }
 
     &__container {
         display: flex;
         will-change: transform;
         backface-visibility: hidden;
+        overflow-x: visible;
+        margin-right: col(3);
     }
 
     & .project-thumb {
         flex: 0 0 auto;
-        flex-wrap: nowrap;
         margin-right: col(3);
         user-select: none;
         -webkit-user-drag: none;
@@ -29,6 +38,42 @@
 
         &:nth-child(1) {
             margin-left: col(2);
+        }
+    }
+
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        z-index: 99999999;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .3s ease-out;
+        will-change: transform;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & svg {
+            transform: rotate(-90deg);
+
+            & circle {
+                stroke: var(--color-white);
+
+                &:nth-child(2) {
+                    stroke: var(--color-primary);
+                    stroke-dasharray: 339.292;
+                    stroke-dashoffset: -94;
+
+                }
+            }
+        }
+
+        & span {
+            font-size: 16px;
+            font-family: var(--font-secondary);
+            color: var(--color-white);
+            font-weight: 500;
         }
     }
 }
