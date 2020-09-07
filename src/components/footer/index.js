@@ -11,8 +11,8 @@ const Footer = ({ footer: { text, socialLinks } }) => {
         <div className="footer__content">
           <p>{text}</p>
           <div className="footer__links">
-            <FooterLink to="/about" text="About" />
-            <FooterLink to="/cases" text="Cases" />
+            <FooterLink to="/about/" text="About" />
+            <FooterLink to="/cases/" text="Cases" />
           </div>
         </div>
         <FooterSocialLinks socialLinks={socialLinks} />

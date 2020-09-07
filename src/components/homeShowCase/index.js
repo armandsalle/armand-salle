@@ -26,7 +26,7 @@ const HomeShowCase = ({ projects }) => {
       </div>
 
       <div className="sticky-link">
-        <CustomLink to="/about" text="View" textLink="all cases" />
+        <CustomLink to="/cases/" text="View" textLink="all cases" />
       </div>
     </section>
   )
