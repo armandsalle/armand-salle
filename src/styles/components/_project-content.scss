@@ -1,0 +1,12 @@
+.project-content {
+    width: col(22);
+    margin: 0 auto $space-xl auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__text {
+        width: col(15);
+        text-align: end;
+    }
+}
