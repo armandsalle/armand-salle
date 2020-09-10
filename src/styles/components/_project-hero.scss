@@ -1,0 +1,21 @@
+.project-hero {
+    width: col(22);
+    margin: $space-xl auto;
+
+    &__thumb {
+        height: 0;
+        padding-top: 30vw;
+        margin-bottom: $space-m;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__content {
+        width: col(15);
+        text-align: end;
+    }
+}
