@@ -9,6 +9,7 @@
     align-items: center;
     z-index: 1;
     overflow-x: hidden;
+    cursor: grab;
 
     &__wrapper {
         position: relative;
@@ -73,7 +74,14 @@
             font-size: 16px;
             font-family: var(--font-secondary);
             color: var(--color-white);
-            font-weight: 500;
+            background-color: var(--color-primary);
+            padding: 2px 8px;
+            transition: background-color .2s ease-out;
+            border-radius: 2px;
+
+            &.bg-color {
+                background-color: var(--color-secondary);
+            }
         }
     }
 }

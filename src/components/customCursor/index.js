@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useLayoutEffect, useContext } from "react"
+import cn from "classname"
 import useMousePosition from "../../hooks/useMousePosition"
 import { ProjectHoverContext } from "../../contexts/projectHoverContext"
 
@@ -84,7 +85,9 @@ const CustomCursor = () => {
           shapeRendering="optimizeQuality"
         />
       </svg>
-      <span>{isHover ? "CLICK" : "DRAG"}</span>
+      <span className={cn(isHover ? "bg-color" : "")}>
+        {isHover ? "CLICK" : "DRAG"}
+      </span>
     </div>
   )
 }
