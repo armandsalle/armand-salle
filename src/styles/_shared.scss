@@ -45,3 +45,10 @@
         width: col($i);
     }
 }
+
+// OFFSET
+@for $i from 1 through 24 {
+    .offset-#{$i} {
+        margin-left: col($i);
+    }
+}
