@@ -1,0 +1,13 @@
+.project-images {
+    width: col(22);
+    margin: $space-xl auto;
+
+    &__item {
+        margin-bottom: $space-m;
+        opacity: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
