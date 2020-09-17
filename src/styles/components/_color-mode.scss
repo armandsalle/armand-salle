@@ -1,0 +1,29 @@
+.color-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 999999;
+
+    &:hover {
+        .color-mode__svg {
+            transform: scale(1.2);
+        }
+    }
+
+    &__svg {
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 60px;
+        height: 60px;
+        transition: transform .2s ease-out;
+        transform-origin: center center;
+    }
+
+    &__circle {
+        fill: var(--color-secondary);
+    }
+}

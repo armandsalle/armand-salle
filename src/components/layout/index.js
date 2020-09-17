@@ -5,6 +5,7 @@ import Nav from "../nav"
 import { useStaticQuery, graphql } from "gatsby"
 import Footer from "../footer"
 import { LayoutContext } from "../../contexts/layoutContext"
+import ColorMode from "../colorMode"
 
 const Layout = ({ children }) => {
   const {
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <ColorMode />
       <Nav />
       <main>{children}</main>
       {hasFooter && <Footer footer={footer} />}
