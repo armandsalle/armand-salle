@@ -37,9 +37,10 @@
     &-link {
         overflow: hidden;
         position: relative;
+        margin-bottom: $space-xxxs;
 
-        &:first-child {
-            margin-bottom: $space-xxxs;
+        &:last-child {
+            margin-bottom: 0;
         }
 
         &:hover {
