@@ -16,7 +16,7 @@ const Nav = () => {
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/cases/" activeClassName="active">
+          <Link to="/cases/" activeClassName="active" partiallyActive={true}>
             CASES
           </Link>
         </li>

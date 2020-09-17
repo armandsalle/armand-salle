@@ -49,7 +49,7 @@ const ProjectThumb = ({ title, thumbnail, url }) => {
   }, [enterProjectLink, leaveProjectLink])
 
   return (
-    <Link to={`/case/${url}`} className="project-thumb" ref={projectThumbRef}>
+    <Link to={`/cases/${url}`} className="project-thumb" ref={projectThumbRef}>
       <div
         className="project-thumb__img"
         style={{ backgroundImage: `url(${thumbnail})` }}
