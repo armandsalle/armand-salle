@@ -48,7 +48,7 @@ const HomeAbout = ({
 
       {page !== "about" && (
         <div className="custom-about-link" ref={customLinkToAbout}>
-          <CustomLink to="/about" text="Learn more" textLink="about me" />
+          <CustomLink to="/about/" text="Learn more" textLink="about me" />
 
           <img
             src={linkAbout.src.childImageSharp.fixed.src}

@@ -8,7 +8,7 @@ const Contact = ({ contactText }) => {
       <Text as="p" splitAndAnime className="like__contact__text">
         {contactText}
       </Text>
-      <CustomLink to="/about" text="Contact" textLink="me" />
+      <CustomLink to="/about/" text="Contact" textLink="me" />
     </div>
   )
 }
