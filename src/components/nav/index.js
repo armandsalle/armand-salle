@@ -1,9 +1,33 @@
-import React from "react"
+import React, { useCallback, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 
 const Nav = () => {
+  const navRef = useRef(null)
+
+  const toggleHeader = useCallback(() => {
+    const pixels = window.pageYOffset
+
+    if (pixels > 20) {
+      navRef.current.classList.add("scrolled")
+    } else {
+      navRef.current.classList.remove("scrolled")
+    }
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener("scroll", function () {
+      toggleHeader()
+    })
+
+    return () => {
+      document.addRemoveListener("scroll", function () {
+        toggleHeader()
+      })
+    }
+  }, [toggleHeader])
+
   return (
-    <nav className="nav">
+    <nav className="nav" ref={navRef}>
       <ul className="nav__list">
         <li className="nav__item">
           <Link to="/" activeClassName="active">
