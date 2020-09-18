@@ -1,38 +1,58 @@
-import React, { useCallback, useState } from "react"
-
-const colors = [
-  {
-    primary: "#F3D631",
-    secondary: "#E65A3E",
-    white: "#296783",
-    black: "#FFF8F0",
-  },
-  {
-    primary: "#4A4BC7",
-    secondary: "#EE9BE4",
-    white: "#FFF8F0",
-    black: "#00AE91",
-  },
-  {
-    primary: "#EE1B49",
-    secondary: "#645E9D",
-    white: "#DFDFDF",
-    black: "#141414",
-  },
-]
+import React, { useState } from "react"
+import anime from "animejs"
 
 const ColorMode = () => {
-  const [colorIndex, setColorIndex] = useState(0)
+  const [colorIndex, setColorIndex] = useState(1)
+  const [prevIndex, setPrevIndex] = useState(0)
 
-  const changeColorMode = useCallback(() => {
-    Object.entries(colors[colorIndex]).forEach(el => {
-      document.documentElement.style.setProperty(`--color-${el[0]}`, el[1])
+  const colors = [
+    {
+      primary: "rgba(238, 27, 73, 1)",
+      secondary: "rgba(100, 94, 157, 1)",
+      white: "rgba(223, 223, 223, 1)",
+      black: "rgba(20, 20, 20, 1)",
+    },
+    {
+      primary: "rgba(74, 75, 199, 1)",
+      secondary: "rgba(238, 155, 228, 1)",
+      white: "rgba(255, 248, 240, 1)",
+      black: "rgba(0, 174, 145, 1)",
+    },
+    {
+      primary: "rgba(243, 214, 49, 1)",
+      secondary: "rgba(230, 90, 62, 1)",
+      white: "rgba(41, 103, 131, 1)",
+      black: "rgba(255, 248, 240, 1)",
+    },
+  ]
+
+  const changeColorMode = () => {
+    const to = colors[colorIndex]
+    const from = colors[prevIndex]
+
+    anime({
+      targets: from,
+      primary: to.primary,
+      secondary: to.secondary,
+      white: to.white,
+      black: to.black,
+      duration: 500,
+      easing: "linear",
+      update: e => {
+        e.animations.forEach(el => {
+          document.documentElement.style.setProperty(
+            `--color-${el.property}`,
+            el.currentValue
+          )
+        })
+      },
     })
 
-    colorIndex + 1 > 2
+    setPrevIndex(colorIndex)
+    colorIndex + 1 > colors.length - 1
       ? setColorIndex(0)
-      : setColorIndex(prevIndex => prevIndex + 1)
-  }, [colorIndex])
+      : setColorIndex(i => i + 1)
+  }
 
   return (
     <button
