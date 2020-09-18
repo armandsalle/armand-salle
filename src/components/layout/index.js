@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <div className="background"></div>
       <ColorMode />
       <Nav />
       <main>{children}</main>

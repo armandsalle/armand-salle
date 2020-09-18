@@ -40,7 +40,6 @@ body {
     font-size: 2.5vw;
     line-height: 1.18;
     color: var(--color-white);
-    background-color: var(--color-black);
     min-height: 100vh;
     max-width: 100vw;
     overscroll-behavior: none;
@@ -59,8 +58,12 @@ img {
     background: var(--color-primary);
 }
 
-// main {
-//     width: 100vw;
-//     background-color: var(--color-black);
-//     margin-bottom: 29.16vw;
-// }
+.background {
+    background-color: var(--color-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9999;
+}
