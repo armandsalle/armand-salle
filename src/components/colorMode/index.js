@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import anime from "animejs"
 
 const ColorMode = () => {
@@ -53,6 +53,15 @@ const ColorMode = () => {
       ? setColorIndex(0)
       : setColorIndex(i => i + 1)
   }
+
+  useEffect(() => {
+    anime({
+      targets: ".color-mode",
+      opacity: 1,
+      duration: 1000,
+      delay: 1000,
+    })
+  }, [])
 
   return (
     <button

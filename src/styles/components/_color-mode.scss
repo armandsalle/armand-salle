@@ -6,6 +6,7 @@
     height: 40px;
     cursor: pointer;
     z-index: 999999;
+    opacity: 0;
 
     &:hover {
         .color-mode__svg {
