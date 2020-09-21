@@ -3,11 +3,13 @@ import { navigate } from "gatsby"
 import { LayoutContext } from "../../contexts/layoutContext"
 import ProjectThumb from "../projectThumb"
 import { CreateSlider } from "butter-slider"
-
+import anime from "animejs"
 import CustomCursor from "../customCursor"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const Cases = ({ projects }) => {
   const { setFooter } = useContext(LayoutContext)
+  const { setExitAnimation } = useContext(AnimationContext)
 
   const navigateOrSlide = useRef(element => {
     let startTimer, link
@@ -34,6 +36,7 @@ const Cases = ({ projects }) => {
       e => {
         const endTimer = new Date()
         if (endTimer - startTimer < 100) {
+          setExitAnimation("case")
           navigate(link)
         }
       },
@@ -64,8 +67,21 @@ const Cases = ({ projects }) => {
       .querySelectorAll(".project-thumb")
       .forEach(element => navigateOrSlide.current(element))
 
-    return () => slider.destroy()
-  }, [])
+    anime({
+      targets: ".project-thumb",
+      opacity: 1,
+      duration: 700,
+      delay: (_, i) => {
+        return i * 150
+      },
+      easing: "easeOutSine",
+    })
+
+    return () => {
+      slider.destroy()
+      setExitAnimation("opacity")
+    }
+  }, [setExitAnimation])
 
   return (
     <section className="cases">
