@@ -3,19 +3,19 @@
     margin: 0 auto $space-xl auto;
 
     .h2 {
-     color: var(--color-white);
-     width: col(18);
+        color: var(--color-white);
+        width: col(18);
 
-     span.hide {
-         overflow: hidden;
-         display: block;
+        span.hide {
+            overflow: hidden;
+            display: block;
 
-         span.line {
-             display: block;
-             transform: translateY(100%);
-         }
-     }
- }
+            span.line {
+                display: block;
+                transform: translateY(100%);
+            }
+        }
+    }
 
     &__things {
         margin-top: $space-xl;
@@ -51,7 +51,7 @@
                 width: 0%;
                 height: 0.05vw;
                 background-color: var(--color-white);
-                transition: width .7s .6s ease-out;
+                transition: width .7s .3s ease-out;
             }
 
             &.thing-visible {
