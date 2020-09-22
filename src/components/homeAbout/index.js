@@ -20,6 +20,12 @@ const HomeAbout = ({
       easing: "easeOutSine",
       duration: 300,
     })
+    anime({
+      targets: ".turn",
+      opacity: 1,
+      easing: "easeOutSine",
+      duration: 450,
+    })
   }, [])
 
   const leaveLink = useCallback(() => {
@@ -31,6 +37,12 @@ const HomeAbout = ({
       rotate: "0deg",
       easing: "easeOutSine",
       duration: 400,
+    })
+    anime({
+      targets: ".turn",
+      opacity: 0,
+      easing: "easeOutSine",
+      duration: 450,
     })
   }, [])
 
