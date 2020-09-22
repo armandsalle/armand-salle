@@ -6,7 +6,7 @@ const ProjectContent = ({ link, text }) => {
   return (
     <div className="project-content">
       <CustomLink to={link} text="Launch" textLink="site" native blank />
-      <Text as="p" className="project-content__text">
+      <Text as="p" className="project-content__text" splitAndAnime>
         {text}
       </Text>
     </div>

@@ -8,5 +8,15 @@
     &__text {
         width: col(15);
         text-align: end;
+
+        span.hide {
+            overflow: hidden;
+            display: block;
+
+            span.line {
+                display: block;
+                transform: translateY(100%);
+            }
+        }
     }
 }
