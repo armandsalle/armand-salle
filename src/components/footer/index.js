@@ -1,6 +1,6 @@
 import React from "react"
 import BackToTop from "./backToTop"
-import FooterSocialLinks from "./FooterSocialLinks"
+import FooterSocialLinks from "./footerSocialLinks"
 import FooterLink from "./footerLink"
 
 const Footer = ({ footer: { text, socialLinks } }) => {
