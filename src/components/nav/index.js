@@ -20,7 +20,7 @@ const Nav = () => {
     })
 
     return () => {
-      document.addRemoveListener("scroll", function () {
+      document.removeListener("scroll", function () {
         toggleHeader()
       })
     }
