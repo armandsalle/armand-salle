@@ -16,7 +16,7 @@ const ProjectHero = ({ topDesc, link, thumbnail }) => {
         opacity: 1,
         easing: "easeOutSine",
         duration: 600,
-        delay: 1000,
+        delay: 400,
       })
     }
   }, [inView])
