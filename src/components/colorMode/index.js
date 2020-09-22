@@ -7,10 +7,10 @@ const ColorMode = () => {
 
   const colors = [
     {
-      primary: "rgba(238, 27, 73, 1)",
-      secondary: "rgba(100, 94, 157, 1)",
-      white: "rgba(223, 223, 223, 1)",
-      black: "rgba(20, 20, 20, 1)",
+      primary: "rgba(243, 214, 49, 1)",
+      secondary: "rgba(230, 90, 62, 1)",
+      white: "rgba(41, 103, 131, 1)",
+      black: "rgba(255, 248, 240, 1)",
     },
     {
       primary: "rgba(74, 75, 199, 1)",
@@ -19,10 +19,10 @@ const ColorMode = () => {
       black: "rgba(0, 174, 145, 1)",
     },
     {
-      primary: "rgba(243, 214, 49, 1)",
-      secondary: "rgba(230, 90, 62, 1)",
-      white: "rgba(41, 103, 131, 1)",
-      black: "rgba(255, 248, 240, 1)",
+      primary: "rgba(238, 27, 73, 1)",
+      secondary: "rgba(100, 94, 157, 1)",
+      white: "rgba(223, 223, 223, 1)",
+      black: "rgba(20, 20, 20, 1)",
     },
   ]
 
