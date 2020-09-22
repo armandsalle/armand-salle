@@ -36,7 +36,7 @@ const Cases = ({ projects }) => {
       e => {
         const endTimer = new Date()
         if (endTimer - startTimer < 100) {
-          setExitAnimation("case")
+          setExitAnimation({ name: "case" })
           navigate(link)
         }
       },
@@ -79,7 +79,7 @@ const Cases = ({ projects }) => {
 
     return () => {
       slider.destroy()
-      setExitAnimation("opacity")
+      setExitAnimation({ name: "opacity" })
     }
   }, [setExitAnimation])
 

@@ -13,7 +13,7 @@ const ProjectHero = ({ topDesc, link, thumbnail }) => {
     if (inView) {
       anime({
         targets: ".project-hero__thumb",
-        opacity: [0, 1],
+        opacity: 1,
         easing: "easeOutSine",
         duration: 600,
         delay: 1000,

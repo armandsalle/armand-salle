@@ -34,9 +34,15 @@ const Layout = ({ children, location }) => {
       autoplay: false,
       easing: "easeOutSine",
       duration: 250,
+      begin: () => {
+        document.querySelector("body").style.pointerEvents = "none"
+      },
+      complete: () => {
+        document.querySelector("body").style.pointerEvents = "all"
+      },
     })
 
-    if (exitAnimation === "opacity") {
+    if (exitAnimation.name === "opacity") {
       timeline
         .add({
           targets: node,
@@ -49,7 +55,7 @@ const Layout = ({ children, location }) => {
           },
           "-=100"
         )
-    } else if (exitAnimation === "case") {
+    } else if (exitAnimation.name === "case") {
       timeline.add({
         targets: ".project-thumb",
         opacity: 0,
