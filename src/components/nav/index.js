@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from "react"
 import { Link } from "gatsby"
+import anime from "animejs"
 
 const Nav = () => {
   const navRef = useRef(null)
@@ -25,6 +26,22 @@ const Nav = () => {
       })
     }
   }, [toggleHeader])
+
+  useEffect(() => {
+    const timeline = anime
+      .timeline({
+        autoplay: false,
+        easing: "easeOutSine",
+        duration: 350,
+      })
+      .add({
+        targets: ".nav__item",
+        opacity: 1,
+        delay: (_, i) => 600 + i * 130,
+      })
+
+    window.loadPromise.then(() => timeline.play())
+  }, [])
 
   return (
     <nav className="nav" ref={navRef}>
