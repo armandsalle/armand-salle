@@ -9,21 +9,14 @@
       "link": "https://github.com/armandsalle/butter-slider",
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
-      "thumbnail": "../../images/template.png",
+      "thumbnail": "../../images/butterslider/butterslider.png",
       "images": [
         {
           "id": "bs-1",
-          "src": "../../images/template.png",
+          "src": "../../images/butterslider/butterslider1.png",
           "alt": "",
           "col": 15,
-          "offset": 0
-        },
-        {
-          "id": "bs-2",
-          "src": "../../images/template.png",
-          "alt": "",
-          "col": 15,
-          "offset": 7
+          "offset": 2
         }
       ],
       "id": 1
@@ -37,7 +30,7 @@
       "link": "https://madlinevslr.com/",
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
-      "thumbnail": "../../images/template.png",
+      "thumbnail": "../../images/camille/wip.png",
       "images": [],
       "id": 2
     },
@@ -50,8 +43,51 @@
       "link": "https://madlinevslr.com/",
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
-      "thumbnail": "../../images/template.png",
-      "images": [],
+      "thumbnail": "../../images/madline/madlinevslr2.png",
+      "images": [
+        {
+          "id": "md-1",
+          "src": "../../images/madline/madlinevslr.png",
+          "alt": "madlinevslr website",
+          "col": 15,
+          "offset": 0
+        },
+        {
+          "id": "md-2",
+          "src": "../../images/madline/madlinevslr1.png",
+          "alt": "madlinevslr website",
+          "col": 15,
+          "offset": 7
+        },
+        {
+          "id": "md-3",
+          "src": "../../images/madline/madlinevslr2.png",
+          "alt": "madlinevslr website",
+          "col": 15,
+          "offset": 2
+        },
+        {
+          "id": "md-4",
+          "src": "../../images/madline/madlinevslr4.png",
+          "alt": "madlinevslr website",
+          "col": 15,
+          "offset": 6
+        },
+        {
+          "id": "md-5",
+          "src": "../../images/madline/madlinevslr5.png",
+          "alt": "madlinevslr website",
+          "col": 15,
+          "offset": 0
+        },
+        {
+          "id": "md-6",
+          "src": "../../images/madline/madlinevslr6.png",
+          "alt": "madlinevslr website",
+          "col": 15,
+          "offset": 7
+        }
+      ],
       "id": 3
     },
     {
