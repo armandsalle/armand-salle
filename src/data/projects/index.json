@@ -17,6 +17,13 @@
           "alt": "",
           "col": 15,
           "offset": 2
+        },
+        {
+          "id": "bs-2",
+          "src": "../../images/butterslider/butterslider2.png",
+          "alt": "",
+          "col": 15,
+          "offset": 5
         }
       ],
       "id": 1
