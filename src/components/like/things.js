@@ -2,13 +2,28 @@ import React, { useEffect, useRef, useCallback } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
 
-const Thing = ({ index, inner }) => {
+const Thing = React.memo(({ index, children, last }) => {
+  return (
+    <div className="like__thing">
+      <div className="like__thing__bar"></div>
+      <div className="like__thing__title">
+        <span className="like__thing__number">0{index + 1}</span>
+        {children}
+      </div>
+
+      {last && <div className="like__thing__bar --bottom"></div>}
+    </div>
+  )
+})
+
+const Things = ({ likeList }) => {
+  const thingText = useRef(null)
+
   const [thingViewRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: "0px",
+    threshold: 0.2,
   })
-
-  const thingText = useRef(null)
 
   const setRefs = useCallback(
     node => {
@@ -20,43 +35,51 @@ const Thing = ({ index, inner }) => {
 
   useEffect(() => {
     if (inView) {
-      thingText.current.classList.add("thing-visible")
+      const tl = anime
+        .timeline({
+          easing: "easeOutSine",
+          autoplay: false,
+        })
+        .add({
+          targets: thingText.current.querySelectorAll(".like__thing__bar"),
+          width: "100%",
+          delay: (_, i) => i * 100,
+          duration: 500,
+        })
+        .add(
+          {
+            targets: thingText.current.querySelectorAll(".like__thing__number"),
+            opacity: [0, 1],
+            delay: (_, i) => 500 + i * 100,
+            duration: 600,
+          },
+          0
+        )
 
-      anime({
-        targets: thingText.current.querySelector(".like__thing__number"),
-        opacity: [0, 1],
-        easing: "easeOutSine",
-        duration: 600,
-        delay: 500,
-      })
+      tl.play()
     }
   }, [inView])
 
-  return (
-    <div className="like__thing" ref={setRefs}>
-      <div className="like__thing__title">
-        <span className="like__thing__number">0{index + 1}</span>
-        {inner}
-      </div>
-    </div>
-  )
-}
+  const inner = useCallback(el => {
+    return el.split("<span>").map((text, i) =>
+      i === 1 ? (
+        <span key={i} className="pizza">
+          {text}
+        </span>
+      ) : (
+        <span key={i}>{text}</span>
+      )
+    )
+  }, [])
 
-const Things = ({ likeList }) => {
   return (
-    <div className="like__things">
+    <div className="like__things" ref={setRefs}>
       {likeList.map((el, i) => {
-        const inner = el.split("<span>").map((text, i) =>
-          i === 1 ? (
-            <span key={i} className="pizza">
-              {text}
-            </span>
-          ) : (
-            <span key={i}>{text}</span>
-          )
+        return (
+          <Thing key={i} index={i} last={!!(i === likeList.length - 1)}>
+            {inner(el)}
+          </Thing>
         )
-
-        return <Thing key={i} index={i} inner={inner} />
       })}
     </div>
   )
