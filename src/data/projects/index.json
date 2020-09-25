@@ -9,19 +9,19 @@
       "link": "https://github.com/armandsalle/butter-slider",
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
-      "thumbnail": "../../images/butterslider/butterslider.png",
+      "thumbnail": "../../images/butterslider/butterslider2.png",
       "images": [
         {
           "id": "bs-1",
-          "src": "../../images/butterslider/butterslider1.png",
-          "alt": "",
+          "src": "../../images/butterslider/butterslider.png",
+          "alt": "Butter slider example",
           "col": 15,
           "offset": 2
         },
         {
           "id": "bs-2",
-          "src": "../../images/butterslider/butterslider2.png",
-          "alt": "",
+          "src": "../../images/butterslider/butterslider1.png",
+          "alt": "Butter slider example",
           "col": 15,
           "offset": 5
         }
@@ -34,7 +34,7 @@
       "slug": "camille-snr",
       "type": "DESIGN & DEV",
       "year": 2020,
-      "link": "https://madlinevslr.com/",
+      "link": "#",
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
       "thumbnail": "../../images/camille/wip.png",
@@ -72,13 +72,6 @@
           "alt": "madlinevslr website",
           "col": 15,
           "offset": 2
-        },
-        {
-          "id": "md-4",
-          "src": "../../images/madline/madlinevslr4.png",
-          "alt": "madlinevslr website",
-          "col": 15,
-          "offset": 6
         },
         {
           "id": "md-5",
