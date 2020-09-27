@@ -8,7 +8,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: col(9);
-        height: cal(12);
+        height: col(12);
         overflow: hidden;
         z-index: -1;
         opacity: 0;
@@ -23,7 +23,7 @@
                 top: 0;
                 left: 0;
                 width: col(9);
-                height: cal(12);
+                height: col(12);
                 transform: translateX(-50%);
 
                 &:last-child {
@@ -37,7 +37,7 @@
 
         & .gatsby-image-wrapper {
             width: col(9);
-            height: cal(12);
+            height: col(12);
             object-fit: cover;
         }
     }
