@@ -60,13 +60,23 @@ const Layout = ({ children, location }) => {
           "-=100"
         )
     } else if (exitAnimation.name === "case") {
-      timeline.add({
-        targets: ".project-thumb",
-        opacity: 0,
-        delay: (_, i) => {
-          return i * 150
-        },
-      })
+      timeline
+        .add({
+          targets: ".project-thumb",
+          opacity: 0,
+          delay: (_, i) => {
+            return i * 50
+          },
+          duration: 125,
+        })
+        .add(
+          {
+            targets: node,
+            opacity: 0,
+            duration: 125,
+          },
+          "-=125"
+        )
     }
 
     if (animationsCanRuns) {
