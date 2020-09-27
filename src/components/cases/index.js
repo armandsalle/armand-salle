@@ -77,9 +77,24 @@ const Cases = ({ projects }) => {
       easing: "easeOutSine",
     })
 
+    document.addEventListener(
+      "dragstart",
+      e => {
+        e.preventDefault()
+      },
+      true
+    )
+
     return () => {
       slider.destroy()
       setExitAnimation({ name: "opacity" })
+      document.removeEventListener(
+        "dragstart",
+        e => {
+          e.preventDefault()
+        },
+        true
+      )
     }
   }, [setExitAnimation])
 
