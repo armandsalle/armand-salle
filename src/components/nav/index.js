@@ -40,7 +40,7 @@ const Nav = () => {
         delay: (_, i) => 600 + i * 130,
       })
 
-    window.loadPromise.then(() => timeline.play())
+    timeline.play()
   }, [])
 
   return (

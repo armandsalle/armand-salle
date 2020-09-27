@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import "../../styles/main.scss"
 import Nav from "../nav"
 import { useStaticQuery, graphql } from "gatsby"
@@ -8,6 +8,8 @@ import { AnimationContext } from "../../contexts/animationContext"
 import ColorMode from "../colorMode"
 import { Transition, SwitchTransition } from "react-transition-group"
 import anime from "animejs"
+import FontFaceObserver from "fontfaceobserver"
+import imagesLoaded from "imagesloaded"
 
 const Layout = ({ children, location }) => {
   const {
@@ -27,7 +29,9 @@ const Layout = ({ children, location }) => {
   `)
 
   const { hasFooter } = useContext(LayoutContext)
-  const { exitAnimation } = useContext(AnimationContext)
+  const { exitAnimation, setAnimationsCanRuns, animationsCanRuns } = useContext(
+    AnimationContext
+  )
 
   const playExit = node => {
     let timeline = anime.timeline({
@@ -65,7 +69,9 @@ const Layout = ({ children, location }) => {
       })
     }
 
-    window.loadPromise.then(() => timeline.play())
+    if (animationsCanRuns) {
+      timeline.play()
+    }
   }
 
   const playEnter = () => {
@@ -81,26 +87,57 @@ const Layout = ({ children, location }) => {
         opacity: 1,
       })
 
-    window.loadPromise.then(() => timeline.play())
+    if (!!animationsCanRuns) {
+      timeline.play()
+    }
   }
+
+  useEffect(() => {
+    // window.loadPromise.then(() => console.log("DOMContent loaded"))
+
+    const font = new FontFaceObserver("Garbata-Regular")
+    const fontTwo = new FontFaceObserver("Geomanist")
+    const fontThree = new FontFaceObserver("TimesNewRoman-Italic")
+    const imgLoaded = imagesLoaded(
+      document.querySelector("body"),
+      { background: true },
+      null
+    )
+
+    Promise.all([
+      window.loadPromise,
+      font.load(null, 5000),
+      fontTwo.load(null, 5000),
+      fontThree.load(null, 5000),
+      imgLoaded.on("done"),
+    ]).then(function () {
+      console.log("DOMContent loaded")
+      console.log("Family A & B & C have loaded")
+      console.log("all images are loaded")
+      setAnimationsCanRuns(true)
+    })
+  }, [setAnimationsCanRuns])
 
   return (
     <>
       <div className="background"></div>
-      <ColorMode />
-      <Nav />
-      <SwitchTransition mode="out-in">
-        <Transition
-          key={location.pathname}
-          timeout={500}
-          onExit={node => playExit(node)}
-          onEnter={node => playEnter(node)}
-        >
-          <main>{children}</main>
-        </Transition>
-      </SwitchTransition>
-
-      {hasFooter && <Footer footer={footer} />}
+      {animationsCanRuns && (
+        <>
+          <ColorMode />
+          <Nav />
+          <SwitchTransition mode="out-in">
+            <Transition
+              key={location.pathname}
+              timeout={500}
+              onExit={node => playExit(node)}
+              onEnter={node => playEnter(node)}
+            >
+              <main>{children}</main>
+            </Transition>
+          </SwitchTransition>
+          {hasFooter && <Footer footer={footer} />}
+        </>
+      )}
     </>
   )
 }

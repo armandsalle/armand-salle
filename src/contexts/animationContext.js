@@ -5,12 +5,15 @@ const defaultState = {
   enterAnimation: { name: "opacity" },
   setExitAnimation: () => {},
   setEnterAnimation: () => {},
+  animationsCanRuns: false,
+  setAnimationsCanRuns: () => {},
 }
 export const AnimationContext = createContext(defaultState)
 
 export const AnimationProvider = ({ children }) => {
   const [exitAnimation, setExitAnimation] = useState({ name: "opacity" })
   const [enterAnimation, setEnterAnimation] = useState({ name: "opacity" })
+  const [animationsCanRuns, setAnimationsCanRuns] = useState(false)
 
   return (
     <AnimationContext.Provider
@@ -19,6 +22,8 @@ export const AnimationProvider = ({ children }) => {
         setExitAnimation,
         enterAnimation,
         setEnterAnimation,
+        animationsCanRuns,
+        setAnimationsCanRuns,
       }}
     >
       {children}
