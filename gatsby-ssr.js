@@ -22,4 +22,22 @@ export const onRenderBody = ({ setHeadComponents }) => {
       }}
     />,
   ])
+  // setPostBodyComponents([
+  //   <script
+  //     key="fonts_javascript"
+  //     type="module"
+  //     dangerouslySetInnerHTML={{
+  //       __html: `
+  //       import 'https://unpkg.com/fontfaceobserver'
+  //       var font = new FontFaceObserver('Garbata-Regular');
+  //       var fontTwo = new FontFaceObserver('Geomanist');
+  //       var fontThree = new FontFaceObserver('TimesNewRoman-Italic');
+
+  //       Promise.all([font.load(), fontTwo.load(), fontThree.load()]).then(function () {
+  //         console.log('Family A & B & C have loaded');
+  //       });
+  // `,
+  //     }}
+  //   />,
+  // ])
 }
