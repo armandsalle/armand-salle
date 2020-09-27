@@ -10,6 +10,7 @@
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
       "thumbnail": "../../images/butterslider/butterslider2.png",
+      "altThumb": "Butter Slider project thumbnail",
       "images": [
         {
           "id": "bs-1",
@@ -38,6 +39,7 @@
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
       "thumbnail": "../../images/camille/wip.png",
+      "altThumb": "Camille Snr project thumbnail",
       "images": [],
       "id": 2
     },
@@ -51,6 +53,7 @@
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
       "thumbnail": "../../images/madline/madlinevslr2.png",
+      "altThumb": "Madline Vslr project thumbnail",
       "images": [
         {
           "id": "md-1",
@@ -100,6 +103,7 @@
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
       "bottomDesc": "At vero eos et accusam et justo duo<br /> dolores et ea rebum. Stet clita kasd<br /> gubergren, no sea takimata sanctus est<br /> Lorem ipsum dolor sit amet. Lorem ipsum<br /> dolor sit amet, consetetur sadipscing<br /> elitr.",
       "thumbnail": "../../images/template.png",
+      "altThumb": "Hemphill Mag project thumbnail",
       "images": [],
       "id": 4
     }

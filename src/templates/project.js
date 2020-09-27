@@ -18,6 +18,7 @@ const ProjectTemplate = ({
     year,
     type,
     thumbnail,
+    altThumb,
     link,
     topDesc,
     bottomDesc,
@@ -34,7 +35,12 @@ const ProjectTemplate = ({
     <>
       <SEO title={title} />
       <HeroTitle title={title} infoFirstLine={type} infoSecondLine={year} />
-      <ProjectHero thumbnail={thumbnail} link={link} topDesc={topDesc} />
+      <ProjectHero
+        thumbnail={thumbnail}
+        link={link}
+        topDesc={topDesc}
+        altThumb={altThumb}
+      />
       <ProjectImages images={images} />
       <ProjectContent link={link} text={bottomDesc} />
       <NextProject project={nextProject} />
@@ -52,8 +58,13 @@ export const projectQuery = graphql`
         year
         type
         thumbnail {
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 1200, quality: 70) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
+        altThumb
         link
         topDesc
         bottomDesc

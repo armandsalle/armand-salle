@@ -64,7 +64,7 @@ export const indexQuery = graphql`
           src {
             childImageSharp {
               fixed(width: 200, height: 200, quality: 80) {
-                ...GatsbyImageSharpFixed_noBase64
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -85,8 +85,13 @@ export const indexQuery = graphql`
         isOnHome
         slug
         thumbnail {
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 70) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
+        altThumb
       }
     }
   }

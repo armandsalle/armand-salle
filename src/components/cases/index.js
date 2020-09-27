@@ -92,7 +92,8 @@ const Cases = ({ projects }) => {
             <ProjectThumb
               key={i}
               title={project.title}
-              thumbnail={project.thumbnail.publicURL}
+              thumbnail={project.thumbnail}
+              altThumb={project.altThumb}
               url={project.slug}
             />
           ))}

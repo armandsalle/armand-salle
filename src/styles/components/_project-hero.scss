@@ -3,12 +3,9 @@
     margin: $space-xl auto;
 
     &__thumb {
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 0;
+        height: 30vw;
+        width: 100%;
         opacity: 0;
-        padding-top: 30vw;
         margin-bottom: $space-m;
     }
 

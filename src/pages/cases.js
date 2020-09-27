@@ -24,8 +24,13 @@ export const casesQuery = graphql`
         title
         slug
         thumbnail {
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 750, quality: 70) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
+        altThumb
       }
     }
   }
