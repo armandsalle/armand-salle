@@ -93,8 +93,6 @@ const Layout = ({ children, location }) => {
   }
 
   useEffect(() => {
-    // window.loadPromise.then(() => console.log("DOMContent loaded"))
-
     const font = new FontFaceObserver("Garbata-Regular")
     const fontTwo = new FontFaceObserver("Geomanist")
     const fontThree = new FontFaceObserver("TimesNewRoman-Italic")
