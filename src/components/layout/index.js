@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import "../../styles/main.scss"
 import Nav from "../nav"
 import { useStaticQuery, graphql } from "gatsby"
@@ -8,8 +8,6 @@ import { AnimationContext } from "../../contexts/animationContext"
 import ColorMode from "../colorMode"
 import { Transition, SwitchTransition } from "react-transition-group"
 import anime from "animejs"
-import FontFaceObserver from "fontfaceobserver"
-import imagesLoaded from "imagesloaded"
 
 const Layout = ({ children, location }) => {
   const {
@@ -29,9 +27,7 @@ const Layout = ({ children, location }) => {
   `)
 
   const { hasFooter } = useContext(LayoutContext)
-  const { exitAnimation, setAnimationsCanRuns, animationsCanRuns } = useContext(
-    AnimationContext
-  )
+  const { exitAnimation, animationsCanRuns } = useContext(AnimationContext)
 
   const playExit = node => {
     let timeline = anime.timeline({
@@ -101,30 +97,6 @@ const Layout = ({ children, location }) => {
       timeline.play()
     }
   }
-
-  useEffect(() => {
-    const font = new FontFaceObserver("Garbata-Regular")
-    const fontTwo = new FontFaceObserver("Geomanist")
-    const fontThree = new FontFaceObserver("TimesNewRoman-Italic")
-    const imgLoaded = imagesLoaded(
-      document.querySelector("body"),
-      { background: true },
-      null
-    )
-
-    Promise.all([
-      window.loadPromise,
-      font.load(null, 5000),
-      fontTwo.load(null, 5000),
-      fontThree.load(null, 5000),
-      imgLoaded.on("done"),
-    ]).then(function () {
-      console.log("DOMContent loaded")
-      console.log("Family A & B & C have loaded")
-      console.log("all images are loaded")
-      setAnimationsCanRuns(true)
-    })
-  }, [setAnimationsCanRuns])
 
   return (
     <>
