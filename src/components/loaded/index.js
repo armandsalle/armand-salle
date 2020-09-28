@@ -44,8 +44,12 @@ const Loaded = ({ children }) => {
         .timeline({
           duration: 700,
           easing: "easeOutSine",
-          complete: () =>
-            (document.querySelector("body").style.overflowY = "unset"),
+          complete: () => {
+            document.querySelector("body").style.overflowY = "unset"
+            anime.set(".loaded", {
+              display: "none",
+            })
+          },
         })
         .add({
           targets: ".loaded__wrapper svg",

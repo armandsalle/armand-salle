@@ -57,7 +57,7 @@ const Cases = ({ projects }) => {
       slider: ".cases__container",
       smoothAmount: 0.08,
       dragSpeed: 2,
-      hasTouchEvents: true,
+      hasTouchEvents: false,
       getScrollPercent: e => {
         progressBar.style.strokeDashoffset = `${-94 - (e * -94) / 100}`
       },

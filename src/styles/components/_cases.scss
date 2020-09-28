@@ -16,6 +16,11 @@
         width: 100vw;
         overflow-x: hidden;
 
+        @media (hover: none) {
+            & {
+                overflow-x: unset;
+            }
+        }
     }
 
     &__container {
@@ -55,6 +60,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+
+        @media (hover: none) {
+            & {
+                display: none;
+            }
+        }
 
         & svg {
             transform: rotate(-90deg);
