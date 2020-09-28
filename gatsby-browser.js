@@ -2,12 +2,15 @@ import React from "react"
 import { LayoutProvider } from "./src/contexts/layoutContext"
 import { ProjectHoverProvider } from "./src/contexts/projectHoverContext"
 import { AnimationProvider } from "./src/contexts/animationContext"
+import Loaded from "./src/components/loaded"
 
 export const wrapRootElement = ({ element }) => {
   return (
     <LayoutProvider>
       <ProjectHoverProvider>
-        <AnimationProvider>{element}</AnimationProvider>
+        <AnimationProvider>
+          <Loaded>{element}</Loaded>
+        </AnimationProvider>
       </ProjectHoverProvider>
     </LayoutProvider>
   )
