@@ -8,6 +8,7 @@ import { AnimationContext } from "../../contexts/animationContext"
 import ColorMode from "../colorMode"
 import { Transition, SwitchTransition } from "react-transition-group"
 import anime from "animejs"
+import Loaded from "../loaded"
 
 const Layout = ({ children, location }) => {
   const {
@@ -99,7 +100,7 @@ const Layout = ({ children, location }) => {
   }
 
   return (
-    <>
+    <Loaded>
       <div className="background"></div>
       {animationsCanRuns && (
         <>
@@ -118,7 +119,7 @@ const Layout = ({ children, location }) => {
           {hasFooter && <Footer footer={footer} />}
         </>
       )}
-    </>
+    </Loaded>
   )
 }
 
