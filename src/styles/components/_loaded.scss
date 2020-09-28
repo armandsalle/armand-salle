@@ -12,11 +12,15 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 59.58vw;
+        height: 6.82vw;
         transform: translate(-50%, -50%);
         overflow: hidden;
 
         & svg {
             transform: translateY(110%);
+            width: 59.58vw;
+            height: 6.82vw;
         }
     }
 }

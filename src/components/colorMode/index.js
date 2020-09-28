@@ -61,6 +61,13 @@ const ColorMode = () => {
       duration: 1000,
       delay: 1000,
     })
+
+    if (window.matchMedia("(max-width: 425px)").matches) {
+      const circle = document.querySelector(".color-mode__circle")
+      circle.setAttribute("cx", "15")
+      circle.setAttribute("cy", "15")
+      circle.setAttribute("r", "15")
+    }
   }, [])
 
   return (
