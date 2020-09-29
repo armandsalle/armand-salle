@@ -12,10 +12,10 @@ const ProjectThumb = ({ title, thumbnail, url, altThumb }) => {
   const enterProjectLink = useCallback(() => {
     setHover(true)
 
-    anime.remove(arrow)
+    anime.remove(arrow.current)
 
     anime({
-      targets: arrow,
+      targets: arrow.current,
       translateY: 0,
       easing: "easeOutSine",
       duration: 300,
@@ -25,10 +25,10 @@ const ProjectThumb = ({ title, thumbnail, url, altThumb }) => {
   const leaveProjectLink = useCallback(() => {
     setHover(false)
 
-    anime.remove(arrow)
+    anime.remove(arrow.current)
 
     anime({
-      targets: arrow,
+      targets: arrow.current,
       translateY: "-115%",
       easing: "easeOutSine",
       duration: 300,
