@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Armand Sallé - Creative developer`,
-    description: `My personnal website.`,
+    description: `HI! I'M A FRENCH CREATIVE FRONTEND DEVELOPER FREELANCE, BASED IN NANTES, WITH A GREAT INTEREST IN FOOD AND WEB DESIGN. AVAILABLE FOR WORK.`,
     author: `@armandsalle`,
   },
   plugins: [
