@@ -38,7 +38,7 @@ export const indexQuery = graphql`
       imagePath {
         src {
           childImageSharp {
-            fluid(maxWidth: 710, quality: 50) {
+            fluid(maxWidth: 450, quality: 60) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -86,7 +86,7 @@ export const indexQuery = graphql`
         slug
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 70) {
+            fluid(maxWidth: 450, quality: 60) {
               ...GatsbyImageSharpFluid
             }
           }
