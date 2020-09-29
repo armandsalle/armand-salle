@@ -26,15 +26,15 @@ const Loaded = ({ children }) => {
       fontThree.load(null, 5000),
       imgLoaded.on("done"),
     ]).then(function () {
-      const diff = performance.now() - loadedStart > 600 ? 0 : 600
+      const diff = performance.now() - loadedStart > 300 ? 0 : 300
 
       setTimeout(() => {
         setLoadedCanGo(true)
-      }, 200 + diff)
+      }, 300 + diff)
 
       setTimeout(() => {
         setAnimationsCanRuns(true)
-      }, 1000 + diff)
+      }, 1800 + diff)
     })
   }, [setAnimationsCanRuns, loadedStart])
 
