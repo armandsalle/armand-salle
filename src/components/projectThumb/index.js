@@ -7,13 +7,15 @@ import Img from "gatsby-image"
 const ProjectThumb = ({ title, thumbnail, url, altThumb }) => {
   const projectThumbRef = useRef(null)
   const { setHover } = useContext(ProjectHoverContext)
+  const arrow = useRef(null)
 
   const enterProjectLink = useCallback(() => {
     setHover(true)
-    anime.remove(projectThumbRef.current.querySelector(".arrow"))
+
+    anime.remove(arrow)
 
     anime({
-      targets: projectThumbRef.current.querySelector(".arrow"),
+      targets: arrow,
       translateY: 0,
       easing: "easeOutSine",
       duration: 300,
@@ -22,10 +24,11 @@ const ProjectThumb = ({ title, thumbnail, url, altThumb }) => {
 
   const leaveProjectLink = useCallback(() => {
     setHover(false)
-    anime.remove(projectThumbRef.current.querySelector(".arrow"))
+
+    anime.remove(arrow)
 
     anime({
-      targets: projectThumbRef.current.querySelector(".arrow"),
+      targets: arrow,
       translateY: "-115%",
       easing: "easeOutSine",
       duration: 300,
@@ -48,6 +51,10 @@ const ProjectThumb = ({ title, thumbnail, url, altThumb }) => {
       false
     )
   }, [enterProjectLink, leaveProjectLink])
+
+  useEffect(() => {
+    arrow.current = projectThumbRef.current.querySelector(".arrow")
+  }, [])
 
   return (
     <Link to={`/cases/${url}`} className="project-thumb" ref={projectThumbRef}>
