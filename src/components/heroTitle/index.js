@@ -1,8 +1,11 @@
-import React, { useCallback, useRef, useEffect } from "react"
+import React, { useCallback, useRef, useEffect, useContext } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const HeroTitle = ({ title, infoFirstLine, infoSecondLine }) => {
+  const { animationsCanRuns } = useContext(AnimationContext)
+
   const titleRef = useRef(null)
   const firstLineRef = useRef(null)
   const secondLineRef = useRef(null)
@@ -24,10 +27,11 @@ const HeroTitle = ({ title, infoFirstLine, infoSecondLine }) => {
   }, [spanify])
 
   useEffect(() => {
-    if (inView) {
-      // Title animation
+    if (inView && animationsCanRuns) {
       anime
-        .timeline()
+        .timeline({
+          easing: "easeOutSine",
+        })
         .set("h1", {
           opacity: 1,
         })
@@ -35,7 +39,7 @@ const HeroTitle = ({ title, infoFirstLine, infoSecondLine }) => {
           targets: "h1 .letter",
           translateY: ["100%", 0],
           opacity: [0, 1],
-          easing: "easeOutSine",
+
           duration: 800,
           delay: (el, i) => 20 * i,
         })
@@ -43,14 +47,13 @@ const HeroTitle = ({ title, infoFirstLine, infoSecondLine }) => {
           {
             targets: ".info span",
             translateY: ["100%", 0],
-            easing: "easeOutSine",
             duration: 600,
             delay: (_, i) => 100 * i,
           },
           "-=600"
         )
     }
-  }, [inView])
+  }, [inView, animationsCanRuns])
 
   return (
     <header className="container hero-title" ref={heroTitleRef}>
