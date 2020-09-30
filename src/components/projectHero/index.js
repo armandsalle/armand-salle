@@ -1,17 +1,20 @@
-import React, { useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import ProjectContent from "../projectContent"
 import { useInView } from "react-intersection-observer"
 import Img from "gatsby-image"
 import anime from "animejs"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const ProjectHero = ({ topDesc, link, thumbnail, altThumb }) => {
+  const { animationsCanRuns } = useContext(AnimationContext)
+
   const [thumbRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: "0px",
   })
 
   useEffect(() => {
-    if (inView) {
+    if (inView && animationsCanRuns) {
       anime({
         targets: ".project-hero__thumb",
         opacity: 1,
@@ -20,7 +23,7 @@ const ProjectHero = ({ topDesc, link, thumbnail, altThumb }) => {
         delay: 400,
       })
     }
-  }, [inView])
+  }, [inView, animationsCanRuns])
 
   return (
     <section className="project-hero" ref={thumbRef}>
