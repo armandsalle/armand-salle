@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, useCallback } from "react"
+import React, { useEffect, useRef, useCallback, useContext } from "react"
 import { useInView } from "react-intersection-observer"
+import { AnimationContext } from "../../contexts/animationContext"
 import Text from "../text"
 
 const Item = React.memo(({ experience }) => {
   const [title, content] = experience
+  const { animationsCanRuns } = useContext(AnimationContext)
 
   const [itemViewRef, inView] = useInView({
     triggerOnce: true,
@@ -21,12 +23,12 @@ const Item = React.memo(({ experience }) => {
   )
 
   useEffect(() => {
-    if (inView) {
+    if (inView && animationsCanRuns) {
       itemRef.current
         .querySelector(".resume__title span")
         .classList.remove("translate")
     }
-  }, [inView])
+  }, [inView, animationsCanRuns])
 
   return (
     <div className="resume__item" ref={setRefs}>
