@@ -9,7 +9,22 @@ import { AnimationContext } from "../../contexts/animationContext"
 
 const Cases = ({ projects }) => {
   const { setFooter } = useContext(LayoutContext)
-  const { setExitAnimation } = useContext(AnimationContext)
+  const { setExitAnimation, animationsCanRuns } = useContext(AnimationContext)
+
+  const tl = useRef(() =>
+    anime
+      .timeline({
+        easing: "easeOutSine",
+        duration: 700,
+      })
+      .add({
+        targets: ".project-thumb",
+        opacity: 1,
+        delay: (_, i) => {
+          return i * 150
+        },
+      })
+  )
 
   const navigateOrSlide = useRef(element => {
     let startTimer, link
@@ -67,16 +82,6 @@ const Cases = ({ projects }) => {
       .querySelectorAll(".project-thumb")
       .forEach(element => navigateOrSlide.current(element))
 
-    anime({
-      targets: ".project-thumb",
-      opacity: 1,
-      duration: 700,
-      delay: (_, i) => {
-        return i * 150
-      },
-      easing: "easeOutSine",
-    })
-
     document.addEventListener(
       "dragstart",
       e => {
@@ -97,6 +102,12 @@ const Cases = ({ projects }) => {
       )
     }
   }, [setExitAnimation])
+
+  useEffect(() => {
+    if (animationsCanRuns) {
+      tl.current().play()
+    }
+  }, [animationsCanRuns])
 
   return (
     <section className="cases">
