@@ -92,7 +92,7 @@ const Layout = ({ children, location }) => {
         opacity: 1,
       })
 
-    if (!!animationsCanRuns) {
+    if (animationsCanRuns) {
       timeline.play()
     }
   }
