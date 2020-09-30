@@ -3,7 +3,6 @@ import "../../styles/main.scss"
 import Nav from "../nav"
 import { useStaticQuery, graphql } from "gatsby"
 import Footer from "../footer"
-import { LayoutContext } from "../../contexts/layoutContext"
 import { AnimationContext } from "../../contexts/animationContext"
 import ColorMode from "../colorMode"
 import { Transition, SwitchTransition } from "react-transition-group"
@@ -27,7 +26,6 @@ const Layout = ({ children, location }) => {
     }
   `)
 
-  const { hasFooter } = useContext(LayoutContext)
   const { exitAnimation, animationsCanRuns } = useContext(AnimationContext)
 
   const playExit = node => {
@@ -116,7 +114,7 @@ const Layout = ({ children, location }) => {
               <main>{children}</main>
             </Transition>
           </SwitchTransition>
-          {hasFooter && <Footer footer={footer} />}
+          <Footer footer={footer} />
         </>
       )}
     </Loaded>

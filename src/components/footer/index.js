@@ -1,11 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import BackToTop from "./backToTop"
 import FooterSocialLinks from "./footerSocialLinks"
 import FooterLink from "./footerLink"
+import { LayoutContext } from "../../contexts/layoutContext"
 
-const Footer = ({ footer: { text, socialLinks } }) => {
+const Footer = React.memo(({ footer: { text, socialLinks } }) => {
+  const { hasFooter } = useContext(LayoutContext)
+
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      style={{ display: !hasFooter ? "none" : "block" }}
+    >
       <div className="footer__wrapper">
         <BackToTop />
         <div className="footer__content">
@@ -20,6 +26,6 @@ const Footer = ({ footer: { text, socialLinks } }) => {
       </div>
     </footer>
   )
-}
+})
 
 export default Footer
