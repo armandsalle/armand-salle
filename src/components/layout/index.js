@@ -100,23 +100,19 @@ const Layout = ({ children, location }) => {
   return (
     <Loaded>
       <div className="background"></div>
-      {animationsCanRuns && (
-        <>
-          <ColorMode />
-          <Nav />
-          <SwitchTransition mode="out-in">
-            <Transition
-              key={location.pathname}
-              timeout={500}
-              onExit={node => playExit(node)}
-              onEnter={node => playEnter(node)}
-            >
-              <main>{children}</main>
-            </Transition>
-          </SwitchTransition>
-          <Footer footer={footer} />
-        </>
-      )}
+      <ColorMode />
+      <Nav />
+      <SwitchTransition mode="out-in">
+        <Transition
+          key={location.pathname}
+          timeout={500}
+          onExit={node => playExit(node)}
+          onEnter={node => playEnter(node)}
+        >
+          <main>{children}</main>
+        </Transition>
+      </SwitchTransition>
+      <Footer footer={footer} />
     </Loaded>
   )
 }

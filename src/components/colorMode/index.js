@@ -1,7 +1,24 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useRef, useState } from "react"
 import anime from "animejs"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const ColorMode = () => {
+  const { animationsCanRuns } = useContext(AnimationContext)
+
+  const tl = useRef(() =>
+    anime
+      .timeline({
+        duration: 1000,
+        delay: 1000,
+        autoplay: false,
+        easing: "easeOutSine",
+      })
+      .add({
+        targets: ".color-mode",
+        opacity: 1,
+      })
+  )
+
   const [colorIndex, setColorIndex] = useState(1)
   const [prevIndex, setPrevIndex] = useState(0)
 
@@ -55,13 +72,6 @@ const ColorMode = () => {
   }
 
   useEffect(() => {
-    anime({
-      targets: ".color-mode",
-      opacity: 1,
-      duration: 1000,
-      delay: 1000,
-    })
-
     if (window.matchMedia("(max-width: 425px)").matches) {
       const circle = document.querySelector(".color-mode__circle")
       circle.setAttribute("cx", "15")
@@ -69,6 +79,12 @@ const ColorMode = () => {
       circle.setAttribute("r", "15")
     }
   }, [])
+
+  useEffect(() => {
+    if (animationsCanRuns) {
+      tl.current().play()
+    }
+  }, [animationsCanRuns])
 
   return (
     <button
