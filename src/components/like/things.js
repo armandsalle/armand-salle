@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useCallback } from "react"
+import React, { useEffect, useRef, useCallback, useContext } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const Thing = React.memo(({ index, children, last }) => {
   return (
@@ -17,6 +18,8 @@ const Thing = React.memo(({ index, children, last }) => {
 })
 
 const Things = ({ likeList }) => {
+  const { animationsCanRuns } = useContext(AnimationContext)
+
   const thingText = useRef(null)
 
   const [thingViewRef, inView] = useInView({
@@ -34,11 +37,10 @@ const Things = ({ likeList }) => {
   )
 
   useEffect(() => {
-    if (inView) {
-      const tl = anime
+    if (inView && animationsCanRuns) {
+      anime
         .timeline({
           easing: "easeOutSine",
-          autoplay: false,
         })
         .add({
           targets: thingText.current.querySelectorAll(".like__thing__bar"),
@@ -55,10 +57,8 @@ const Things = ({ likeList }) => {
           },
           0
         )
-
-      tl.play()
     }
-  }, [inView])
+  }, [inView, animationsCanRuns])
 
   const inner = useCallback(el => {
     return el.split("<span>").map((text, i) =>

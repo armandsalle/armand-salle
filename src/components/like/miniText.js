@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useCallback } from "react"
+import React, { useEffect, useRef, useCallback, useContext } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const MiniText = ({ miniText }) => {
+  const { animationsCanRuns } = useContext(AnimationContext)
+
   const [textViewRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: "0px",
@@ -19,7 +22,7 @@ const MiniText = ({ miniText }) => {
   )
 
   useEffect(() => {
-    if (inView) {
+    if (inView && animationsCanRuns) {
       anime({
         targets: textRef.current.querySelectorAll(".word span"),
         translateY: ["100%", 0],
@@ -27,7 +30,7 @@ const MiniText = ({ miniText }) => {
         delay: (_, i) => 200 + i * 20,
       })
     }
-  }, [inView])
+  }, [inView, animationsCanRuns])
 
   return (
     <div className="like__miniText" ref={setRefs}>
