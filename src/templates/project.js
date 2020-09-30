@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import HeroTitle from "../components/heroTitle"
 import ProjectHero from "../components/projectHero"
 import ProjectImages from "../components/projectImages"
-import ProjectContent from "../components/projectContent"
 import NextProject from "../components/nextProject"
 
 const ProjectTemplate = ({
@@ -21,7 +20,6 @@ const ProjectTemplate = ({
     altThumb,
     link,
     topDesc,
-    bottomDesc,
     images,
     id,
   } = projects.find(p => p.slug === slug)
@@ -42,7 +40,6 @@ const ProjectTemplate = ({
         altThumb={altThumb}
       />
       <ProjectImages images={images} />
-      <ProjectContent link={link} text={bottomDesc} />
       <NextProject project={nextProject} />
     </>
   )
@@ -67,7 +64,6 @@ export const projectQuery = graphql`
         altThumb
         link
         topDesc
-        bottomDesc
         images {
           id
           src {
