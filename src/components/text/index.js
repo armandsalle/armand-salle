@@ -1,10 +1,13 @@
-import React, { useCallback, useEffect, useRef } from "react"
+import React, { useCallback, useContext, useEffect, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
 import Line from "./line"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const Text = React.memo(
   ({ children, col, className, splitAndAnime, as, love }) => {
+    const { animationsCanRuns } = useContext(AnimationContext)
+
     const inner = useRef(
       children.split("<br />").map((text, i) =>
         love && i === 0 ? (
@@ -33,7 +36,7 @@ const Text = React.memo(
     )
 
     useEffect(() => {
-      if (inView) {
+      if (inView && animationsCanRuns) {
         // Text line animation
         anime({
           targets: textRef.current.querySelectorAll("span.line"),
@@ -43,7 +46,7 @@ const Text = React.memo(
           delay: (_, i) => i * 100,
         })
       }
-    }, [inView, textRef])
+    }, [inView, textRef, animationsCanRuns])
 
     switch (as) {
       case "p":
