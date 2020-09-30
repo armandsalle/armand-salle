@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const CustomLink = ({ to, text, textLink, native, blank }) => {
+const CustomLink = React.memo(({ to, text, textLink, native, blank }) => {
   const inner = (
     <>
       <span className="link__text">{text}</span>
@@ -30,6 +30,6 @@ const CustomLink = ({ to, text, textLink, native, blank }) => {
       )}
     </>
   )
-}
+})
 
 export default CustomLink
