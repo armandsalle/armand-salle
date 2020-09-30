@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from "react"
+import React, { useContext, useEffect, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import anime from "animejs"
 import Title from "./title"
 import Img from "gatsby-image"
 import cn from "classname"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const Hero = React.memo(({ title, imagePath, about }) => {
+  const { animationsCanRuns } = useContext(AnimationContext)
+
   const titleHeroRef = useRef(null)
 
   const [imgRef, inView] = useInView({
@@ -14,13 +17,14 @@ const Hero = React.memo(({ title, imagePath, about }) => {
   })
 
   useEffect(() => {
-    if (inView) {
+    if (inView && animationsCanRuns) {
       anime
-        .timeline()
+        .timeline({
+          easing: "easeOutSine",
+        })
         .add({
           targets: ".img-wrapper",
           opacity: [0, 1],
-          easing: "easeOutSine",
           duration: 600,
           delay: 1000,
         })
@@ -29,14 +33,13 @@ const Hero = React.memo(({ title, imagePath, about }) => {
             targets: titleHeroRef.current.querySelectorAll(".word, .variant"),
             translateY: ["100%", 0],
             opacity: [0, 1],
-            easing: "easeOutSine",
             duration: 800,
             delay: (_, i) => i * 80,
           },
           "-=500"
         )
     }
-  }, [inView])
+  }, [inView, animationsCanRuns])
 
   return (
     <header className="container mt-3">
