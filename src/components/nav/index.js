@@ -1,9 +1,25 @@
-import React, { useCallback, useEffect, useRef } from "react"
+import React, { useCallback, useContext, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import anime from "animejs"
+import { AnimationContext } from "../../contexts/animationContext"
 
 const Nav = () => {
+  const { animationsCanRuns } = useContext(AnimationContext)
+
   const navRef = useRef(null)
+  const tl = useRef(() =>
+    anime
+      .timeline({
+        easing: "easeOutSine",
+        duration: 350,
+        autoplay: false,
+      })
+      .add({
+        targets: ".nav__item",
+        opacity: 1,
+        delay: (_, i) => 600 + i * 130,
+      })
+  )
 
   const toggleHeader = useCallback(() => {
     const pixels = window.pageYOffset
@@ -28,20 +44,10 @@ const Nav = () => {
   }, [toggleHeader])
 
   useEffect(() => {
-    const timeline = anime
-      .timeline({
-        autoplay: false,
-        easing: "easeOutSine",
-        duration: 350,
-      })
-      .add({
-        targets: ".nav__item",
-        opacity: 1,
-        delay: (_, i) => 600 + i * 130,
-      })
-
-    timeline.play()
-  }, [])
+    if (animationsCanRuns) {
+      tl.current().play()
+    }
+  }, [animationsCanRuns])
 
   return (
     <nav className="nav" ref={navRef}>
