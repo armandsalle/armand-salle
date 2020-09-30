@@ -1,7 +1,7 @@
 import React, { useCallback } from "react"
 import anime from "animejs"
 
-const BackToTop = () => {
+const BackToTop = React.memo(() => {
   const getBackToTopWithACoolEffect = useCallback(() => {
     const scrollPos = { y: window.scrollY }
 
@@ -37,6 +37,6 @@ const BackToTop = () => {
       Back to top
     </button>
   )
-}
+})
 
 export default BackToTop
