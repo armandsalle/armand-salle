@@ -35,7 +35,7 @@
       "type": "DESIGN & DEV",
       "year": 2020,
       "link": "#",
-      "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
+      "topDesc": "WIP",
       "thumbnail": "../../images/camille/wip.png",
       "altThumb": "Camille Snr project thumbnail",
       "images": [],
@@ -98,9 +98,31 @@
       "year": 2017,
       "link": "https://issuu.com/hemphill_mag/docs/numero1",
       "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
-      "thumbnail": "../../images/template.png",
+      "thumbnail": "../../images/hemphill/hemphill3.jpg",
       "altThumb": "Hemphill Mag project thumbnail",
-      "images": [],
+      "images": [
+        {
+          "id": "hp-1",
+          "src": "../../images/hemphill/hemphill.jpg",
+          "alt": "hemphill magazine",
+          "col": 15,
+          "offset": 2
+        },
+        {
+          "id": "hp-2",
+          "src": "../../images/hemphill/hemphill2.jpg",
+          "alt": "hemphill magazine",
+          "col": 15,
+          "offset": 7
+        },
+        {
+          "id": "hp-3",
+          "src": "../../images/hemphill/hemphill1.jpg",
+          "alt": "hemphill magazine",
+          "col": 15,
+          "offset": 5
+        }
+      ],
       "id": 4
     }
   ]
