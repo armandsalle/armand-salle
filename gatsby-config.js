@@ -44,6 +44,8 @@ module.exports = {
         name: `Armand Sallé - Creative developer`,
         short_name: `Armand Sallé`,
         start_url: `/`,
+        lang: `en`,
+        theme_color_in_head: false,
         icon: `src/images/favicon.svg`,
       },
     },
