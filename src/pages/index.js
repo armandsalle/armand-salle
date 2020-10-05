@@ -39,7 +39,7 @@ export const indexQuery = graphql`
         src {
           childImageSharp {
             fluid(maxWidth: 450, quality: 60) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -64,7 +64,7 @@ export const indexQuery = graphql`
           src {
             childImageSharp {
               fixed(width: 200, height: 200, quality: 80) {
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFixed_withWebp
               }
             }
           }
@@ -87,7 +87,7 @@ export const indexQuery = graphql`
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 450, quality: 60) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

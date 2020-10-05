@@ -57,7 +57,7 @@ export const projectQuery = graphql`
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 1200, quality: 70) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -69,7 +69,7 @@ export const projectQuery = graphql`
           src {
             childImageSharp {
               fluid(maxWidth: 450, quality: 60) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
