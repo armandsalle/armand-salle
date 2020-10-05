@@ -45,6 +45,12 @@ body {
     overflow-x: hidden;
 }
 
+main,
+nav,
+footer {
+    visibility: hidden;
+}
+
 img {
     pointer-events: none;
     user-select: none;

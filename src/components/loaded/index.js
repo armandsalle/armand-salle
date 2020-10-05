@@ -49,6 +49,9 @@ const Loaded = ({ children }) => {
             anime.set(".loaded", {
               display: "none",
             })
+            anime.set("main, nav, footer", {
+              visibility: "visible",
+            })
           },
         })
         .add({
