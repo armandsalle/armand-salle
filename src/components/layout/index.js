@@ -38,6 +38,9 @@ const Layout = ({ children, location }) => {
       },
       complete: () => {
         document.querySelector("body").style.pointerEvents = "all"
+        anime.set("main, nav, footer", {
+          visibility: "visible",
+        })
       },
     })
 
@@ -84,13 +87,24 @@ const Layout = ({ children, location }) => {
       .timeline({
         autoplay: false,
         easing: "easeOutSine",
-        duration: 100,
-        delay: 100,
+        duration: 250,
+      })
+      .set("main, nav, footer", {
+        visibility: "visible",
       })
       .add({
-        targets: "footer",
+        targets: "main",
         opacity: 1,
+        duration: 200,
       })
+      .add(
+        {
+          targets: "footer",
+          opacity: 1,
+          delay: 100,
+        },
+        0
+      )
 
     if (animationsCanRuns) {
       timeline.play()

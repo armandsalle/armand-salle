@@ -49,9 +49,6 @@ const Loaded = ({ children }) => {
             anime.set(".loaded", {
               display: "none",
             })
-            anime.set("main, nav, footer", {
-              visibility: "visible",
-            })
           },
         })
         .add({
@@ -61,6 +58,14 @@ const Loaded = ({ children }) => {
         .add({
           targets: ".loaded",
           translateY: "-100%",
+        })
+        .set("main, nav, footer", {
+          visibility: "visible",
+        })
+        .add({
+          targets: "main",
+          duration: 150,
+          opacity: 1,
         })
     }
   }, [loadedCanGo])

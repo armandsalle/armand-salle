@@ -51,6 +51,10 @@ footer {
     visibility: hidden;
 }
 
+main {
+    opacity: 0;
+}
+
 img {
     pointer-events: none;
     user-select: none;
