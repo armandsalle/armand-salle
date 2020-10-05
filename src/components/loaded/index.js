@@ -21,11 +21,11 @@ const Loaded = ({ children }) => {
 
     Promise.all([
       window.loadPromise,
-      font.load(null, 5000),
-      fontTwo.load(null, 5000),
-      fontThree.load(null, 5000),
+      font.load(null, 10000),
+      fontTwo.load(null, 10000),
+      fontThree.load(null, 10000),
       imgLoaded.on("done"),
-    ]).then(function () {
+    ]).then(() => {
       const diff = performance.now() - loadedStart > 300 ? 0 : 300
 
       setTimeout(() => {
