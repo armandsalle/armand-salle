@@ -25,7 +25,7 @@ export const casesQuery = graphql`
         slug
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 450, quality: 60) {
+            fluid(maxWidth: 750, quality: 80) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

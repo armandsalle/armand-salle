@@ -7,7 +7,7 @@
       "type": "DEV",
       "year": 2020,
       "link": "https://github.com/armandsalle/butter-slider",
-      "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
+      "topDesc": "My first javascript library! A simple hold<br /> and drag slider, inspired by Basic<br /> Agency home page. A first version has<br /> been released but it is not 100% finished.<br /> Made with Typescript, Rollup, Jest and<br /> GitHub Actions.",
       "thumbnail": "../../images/butterslider/butterslider2.png",
       "altThumb": "Butter Slider project thumbnail",
       "images": [
@@ -48,7 +48,7 @@
       "type": "DESIGN & DEV",
       "year": 2020,
       "link": "https://madlinevslr.com/",
-      "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
+      "topDesc": "Madline is a photographer based in<br /> Orleans, France. I designed and<br /> developed her website trying to<br /> showcase her photos as much as<br /> possible. Made with React, Gatsby and<br /> Prismic.",
       "thumbnail": "../../images/madline/madlinevslr2.png",
       "altThumb": "Madline Vslr project thumbnail",
       "images": [
@@ -97,7 +97,7 @@
       "type": "DESIGN",
       "year": 2017,
       "link": "https://issuu.com/hemphill_mag/docs/numero1",
-      "topDesc": "Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br /> sed diam nonumy eirmod<br /> tempor invidunt ut labore et<br /> dolore aliquyam erat, sed<br /> voluptua.",
+      "topDesc": "Hemphill is a free print magazine about<br /> old school art and culture that I made<br /> in 2017. The photos, the layout and the<br /> texts were made by myself. ",
       "thumbnail": "../../images/hemphill/hemphill3.jpg",
       "altThumb": "Hemphill Mag project thumbnail",
       "images": [
