@@ -44,7 +44,7 @@ const Things = ({ likeList }) => {
         })
         .add({
           targets: thingText.current.querySelectorAll(".like__thing__bar"),
-          width: "100%",
+          translateX: ["100%", "0%"],
           delay: (_, i) => i * 100,
           duration: 500,
         })
