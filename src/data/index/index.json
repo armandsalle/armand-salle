@@ -1,8 +1,8 @@
 {
   "about": {
     "firstParagraph": {
-      "text": "Hello 👋 As said above I am a<br /> frontend developer. I worked<br /> as a print designer after my<br /> studies, but I quickly found<br /> that it was missing some<br /> interactions, so I started to<br /> develop.",
-      "col": 11
+      "text": "Hello 👋 As said above I am a<br /> frontend developer. I worked as a<br /> print designer after my studies, but<br /> I quickly found that it was missing<br /> some interactions, so I started to<br /> learn to code.",
+      "col": 13
     },
     "secondParagraph": {
       "text": "Now I really like to code<br /> animations, transitions and<br /> interactions with a fresh and<br /> cool design. Pizzaiolo in my free<br /> time, I’m looking for the best<br /> homemade pizzas but what I like<br /> most is to eat them. 🍕",

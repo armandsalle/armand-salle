@@ -39,6 +39,10 @@
     margin-top: 6.66vw;
 }
 
+.mr-0 {
+    margin-right: 0 !important;
+}
+
 // COLUMNS
 @for $i from 1 through 24 {
     .col-#{$i} {

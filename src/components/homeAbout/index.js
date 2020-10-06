@@ -3,6 +3,7 @@ import Text from "../text"
 import CustomLink from "../customLink"
 import FunnyCircle from "../funnyCircle"
 import anime from "animejs"
+import cn from "classname"
 
 const HomeAbout = ({
   about: { firstParagraph, secondParagraph, linkAbout },
@@ -54,7 +55,12 @@ const HomeAbout = ({
   }, [enterLink, leaveLink, page])
   return (
     <section className="home-about">
-      <Text className="first-p" col={firstParagraph.col} splitAndAnime as="p">
+      <Text
+        className={cn("first-p", page === "about" && "mr-0")}
+        col={firstParagraph.col}
+        splitAndAnime
+        as="p"
+      >
         {firstParagraph.text}
       </Text>
 
