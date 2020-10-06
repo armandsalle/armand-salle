@@ -2,6 +2,27 @@
   "projects": [
     {
       "isOnHome": true,
+      "title": "CAMILLE SNR",
+      "slug": "camille-snr",
+      "type": "DESIGN & DEV",
+      "year": 2020,
+      "link": "#",
+      "topDesc": "WIP",
+      "thumbnail": "../../images/camille/wip.png",
+      "altThumb": "Camille Snr project thumbnail",
+      "images": [
+        {
+          "id": "cs-1",
+          "src": "../../images/camille/wip.png",
+          "alt": "Camille Snr wip",
+          "col": 22,
+          "offset": 0
+        }
+      ],
+      "id": 1
+    },
+    {
+      "isOnHome": true,
       "title": "BUTTER SLIDER",
       "slug": "butter-slider",
       "type": "DEV",
@@ -26,19 +47,6 @@
           "offset": 5
         }
       ],
-      "id": 1
-    },
-    {
-      "isOnHome": true,
-      "title": "CAMILLE SNR",
-      "slug": "camille-snr",
-      "type": "DESIGN & DEV",
-      "year": 2020,
-      "link": "#",
-      "topDesc": "WIP",
-      "thumbnail": "../../images/camille/wip.png",
-      "altThumb": "Camille Snr project thumbnail",
-      "images": [],
       "id": 2
     },
     {

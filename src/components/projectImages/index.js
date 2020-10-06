@@ -4,9 +4,8 @@ import ImgProject from "./imgProject"
 const ProjectImages = ({ images }) => {
   return (
     <section className="project-images">
-      {images.map(image => (
-        <ImgProject key={image.id} image={image} />
-      ))}
+      {images.length > 0 &&
+        images.map(image => <ImgProject key={image.id} image={image} />)}
     </section>
   )
 }
