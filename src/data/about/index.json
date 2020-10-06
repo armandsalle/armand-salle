@@ -1,11 +1,11 @@
 {
   "about": {
     "firstParagraph": {
-      "text": "hi 👨🏻‍💻 I am a 23 year old frontend<br /> developer who loves good food,<br /> mainly street food and pizza, grilled<br /> designs, salty fonts, caramelized<br /> layouts, spicy images, and making<br /> things move on the web. I also love<br /> solving problems and making cool<br /> features, experimenting with things<br /> and trying to figure out why my<br /> console is yelling at me.",
+      "text": "hi 👨🏻‍💻 I am a 23 years old frontend<br /> developer who loves good food,<br /> mainly street food and pizza, grilled<br /> designs, salty fonts, caramelized<br /> layouts, spicy images, and making<br /> things move on the web. I also love<br /> solving problems and making cool<br /> features, experimenting things and<br /> trying to figure out why my console<br /> is yelling at me.",
       "col": 14
     },
     "secondParagraph": {
-      "text": " My team (Flappy the bunny 🐰 and<br /> Nugget the puppy) and I are<br /> available for opportunities in<br /> Europe and are looking for<br /> artistic, creative or design<br /> based projects.",
+      "text": " My team, (Flappy the bunny 🐰 and<br /> Nugget the puppy 🐶) and I, are<br /> available for opportunities in<br /> Europe and are looking for<br /> artistic, creative or design<br /> based projects.",
       "col": 12
     },
     "linkAbout": {
@@ -14,9 +14,9 @@
     }
   },
   "resume": {
-    "experiences": "After graduating as a graphic designer I launched Hemphill, a paper magazine about art and old school culture but only 1 issue was published. I did some freelance graphic design before I started learning frontend development. After a first experience as a React developer at Troopers Agency in Nantes, I went back to freelance, but this time in development.",
-    "development": "I'm a huge fan of JAMStack, I usually use React and Gatsby with Prismic as headless CMS. I test a lot of stuff, like TypeScript, CI/CD, tests, which I use for my Butter Slider library. Otherwise, I'm comfortable with terminal, git, scss, npm, node, canvas2d, Gsap, animeJs...",
-    "design": "I don't do print design anymore, but I still do webdesign for custom projects. Design is super important to me, I love it when it creates emotions and when the layout, typos and colors match to create something unique and singular. I spend far too much time on Pinterest, Dribble and Instagram scrolling through designer accounts for inspiration. However, I love clean black and white designs as much as I love sites that come out of the space, FULL OF COLORS, AND GO IN ALL DIRECTIONS."
+    "experiences": "After graduating as a graphic designer I launched Hemphill, a paper magazine about art and old school culture. Only 1 issue was published in 2017. I did some freelance graphic design before I started learning frontend development. After a first experience as a React developer at Troopers Agency in Nantes, I went back to freelance, but this time in development.",
+    "development": "I'm a huge fan of JAMStack, I usually use React and Gatsby with Prismic as headless CMS. I test a lot of things, like TypeScript, CI/CD, tests, which I use for my Butter Slider library. Otherwise, I'm comfortable with terminal, git, scss, npm, node, canvas2d, Gsap, animeJs...",
+    "design": "I don't do print design anymore, but I still do webdesign for custom projects. Design is super important to me, I love the emotions that it can create when all the layout, typos and colors match to make something unique and singular. I spend far too much time on Pinterest, Dribble and Instagram scrolling through designer accounts for inspiration. However, I love clean black and white designs as much as I love sites that come out of the space, FULL OF COLORS, AND GO IN ALL DIRECTIONS."
   },
   "love": {
     "title": "Hover this<br /> to see things<br /> I love",
