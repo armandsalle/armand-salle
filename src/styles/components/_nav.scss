@@ -7,6 +7,10 @@
     opacity: 1;
     transition: transform .3s ease-out, opacity .2s ease-out;
 
+    @include media("<phone") {
+        padding-top: 2rem;
+    }
+
     &.scrolled {
         transform: translateY(-50%);
         opacity: 0;
@@ -27,6 +31,10 @@
         user-select: none;
         opacity: 0;
 
+        @include media("<phone") {
+            font-size: 1.4rem;
+        }
+
         &:last-of-type {
             margin-right: 0;
         }
@@ -43,6 +51,12 @@
             border-radius: 50%;
             background-color: var(--color-secondary);
             z-index: 1;
+
+            @include media("<phone") {
+                top: -0.83rem;
+                width: .5rem;
+                height: .5rem;
+            }
         }
     }
 
