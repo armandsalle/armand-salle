@@ -1,5 +1,8 @@
-import React from "react"
+import { navigate } from "gatsby"
 
-const NotFoundPage = () => <div>404</div>
+const NotFoundPage = () => {
+  navigate("/")
+  return null
+}
 
 export default NotFoundPage
