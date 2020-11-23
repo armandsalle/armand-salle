@@ -1,7 +1,10 @@
 import { navigate } from "gatsby"
+import { useEffect } from "react"
 
 const NotFoundPage = () => {
-  navigate("/")
+  useEffect(() => {
+    if (window !== "undefined") navigate("/")
+  }, [])
   return null
 }
 
