@@ -4,19 +4,47 @@
       "isOnHome": true,
       "title": "CAMILLE SNR",
       "slug": "camille-snr",
-      "type": "DESIGN & DEV",
+      "type": "DEV",
       "year": 2020,
-      "link": "#",
-      "topDesc": "WIP",
-      "thumbnail": "../../images/camille/wip.png",
+      "link": "https://camillesaunier.com",
+      "topDesc": "Portfolio site for Camille Saunier,<br /> a french designer based in Lyon.<br /> Made with Webflow and GSAP.<br /> Design by Camille.",
+      "thumbnail": "../../images/camille/hero.png",
       "altThumb": "Camille Snr project thumbnail",
       "images": [
         {
           "id": "cs-1",
-          "src": "../../images/camille/wip.png",
-          "alt": "Camille Snr wip",
-          "col": 22,
+          "src": "../../images/camille/menu.png",
+          "alt": "Camille Snr Menu",
+          "col": 18,
+          "offset": 4
+        },
+        {
+          "id": "cs-2",
+          "src": "../../images/camille/about.png",
+          "alt": "Camille Snr About",
+          "col": 18,
           "offset": 0
+        },
+        {
+          "id": "cs-3",
+          "src": "../../images/camille/projet.png",
+          "alt": "Camille Snr Project",
+          "col": 18,
+          "offset": 4
+        },
+        {
+          "id": "cs-4",
+          "src": "../../images/camille/paysage.png",
+          "alt": "Camille Snr Project Photo",
+          "col": 18,
+          "offset": 2
+        },
+        {
+          "id": "cs-5",
+          "src": "../../images/camille/portrait.png",
+          "alt": "Camille Snr Project Photo",
+          "col": 18,
+          "offset": 2
         }
       ],
       "id": 1
